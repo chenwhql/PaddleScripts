@@ -1,2 +1,0 @@
-# PaddleScripts
-self test scripts
