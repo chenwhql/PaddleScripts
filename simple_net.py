@@ -4,8 +4,9 @@ import paddle
 import paddle.fluid as fluid
 import numpy
 import os
+import paddle.fluid.transpiler.details.program_utils as pu
 
-place = fluid.CPUPlace()
+place = fluid.CUDAPlace(0)
 exe = fluid.Executor(place)
 
 x = fluid.layers.data(name='X', shape=[13], dtype='float32')
@@ -19,9 +20,28 @@ fluid.optimizer.SGD(learning_rate=0.01).minimize(avg_loss)
 
 exe.run(fluid.default_startup_program())
 
+print("startup program:")
+pu.program_to_code(fluid.default_startup_program(), skip_op_callstack=True)
+print("main program:")
+pu.program_to_code(fluid.default_main_program(), skip_op_callstack=True)
+
 x = numpy.random.random(size=(10, 13)).astype('float32')
 y = numpy.random.random(size=(10, 1)).astype('float32')
 
-for step in range(0, 1000):
-    loss_data, = exe.run(fluid.default_main_program(), feed={'X': x, 'Y': y}, fetch_list=[avg_loss.name])
-    # print("avg loss: %.3f" % loss_data[0])
+fetch_list = ['square_error_cost_0.tmp_1', 'mean_0.tmp_0', 'mean_0.tmp_0@GRAD', 'square_error_cost_0.tmp_1@GRAD']
+
+compiled_prog = fluid.compiler.CompiledProgram(
+        fluid.default_main_program()).with_data_parallel(
+            loss_name=avg_loss.name)
+
+for step in range(0, 1):
+    loss_data, avg_loss_data, avg_loss_grad, loss_grad = exe.run(
+        compiled_prog, 
+        feed={'X': x, 'Y': y}, 
+        fetch_list=fetch_list)
+    print("loss:")
+    print(loss_data)
+    print("avg_loss: %.3f, avg_loss_grad: %.3f" 
+        % (avg_loss_data[0], avg_loss_grad[0]))
+    print("loss_grad")
+    print(loss_grad)

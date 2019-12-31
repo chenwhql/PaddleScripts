@@ -11,10 +11,15 @@ hidden = fluid.layers.fc(input=data, size=10)
 loss = fluid.layers.mean(hidden)
 fluid.optimizer.SGD(learning_rate=0.01).minimize(loss)
 
+"""
 print("startup program:")
 print(fluid.default_startup_program())
 print("main program:")
 print(fluid.default_main_program())
+"""
+
+test_prog = fluid.default_main_program().clone(for_test=True)
+print(test_prog)
 
 fluid.default_startup_program().random_seed=1
 exe.run(fluid.default_startup_program())

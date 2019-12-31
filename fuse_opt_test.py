@@ -21,7 +21,7 @@ fluid.optimizer.Momentum(
 exe.run(fluid.default_startup_program())
 
 build_strategy = fluid.BuildStrategy()
-build_strategy.fuse_all_optimizer_ops = True
+# build_strategy.fuse_all_optimizer_ops = True
 # fuse_all_reduce_ops_ default true, coalesce_grad_tensor_pass is on
 compiled_prog = fluid.compiler.CompiledProgram(
     fluid.default_main_program()).with_data_parallel(
