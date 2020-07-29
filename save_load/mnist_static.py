@@ -65,7 +65,7 @@ def convolutional_neural_network(img, label):
         pool_size=2,
         pool_stride=2,
         act="relu")
-    conv_pool_1 = fluid.layers.batch_norm(conv_pool_1)
+    # conv_pool_1 = fluid.layers.batch_norm(conv_pool_1)
     conv_pool_2 = fluid.nets.simple_img_conv_pool(
         input=conv_pool_1,
         filter_size=5,

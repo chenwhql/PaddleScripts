@@ -9,19 +9,17 @@ import tarfile
 
 class SimpleNet(fluid.Layer):
     def __init__(self,
-                 name_scope,
                  hidden_size,
                  vocab_size,
                  num_steps=20,
                  init_scale=0.1,
                  is_sparse=False):
-        super(SimpleNet, self).__init__(name_scope)
+        super(SimpleNet, self).__init__()
         self.hidden_size = hidden_size
         self.vocab_size = vocab_size
         self.init_scale = init_scale
         self.num_steps = num_steps
         self.embedding = Embedding(
-            self.full_name(),
             size=[self.vocab_size, self.hidden_size],
             dtype='float32',
             is_sparse=is_sparse,
@@ -53,7 +51,6 @@ class SimpleNet(fluid.Layer):
         loss = fluid.layers.reshape(loss, shape=[-1, self.num_steps])
         loss = fluid.layers.reduce_mean(loss, dim=[0])
         loss = fluid.layers.reduce_sum(loss)
-        loss.permissions = True
 
         return loss
       
@@ -116,7 +113,6 @@ place = fluid.CUDAPlace(fluid.dygraph.parallel.Env().dev_id)
 with fluid.dygraph.guard(place):
     strategy = fluid.dygraph.parallel.prepare_context()
     simple_net = SimpleNet(
-        "simple_net",
         hidden_size=hidden_size,
         vocab_size=vocab_size,
         num_steps=num_steps,
@@ -129,7 +125,7 @@ with fluid.dygraph.guard(place):
     train_reader = fluid.contrib.reader.distributed_batch_reader(
             train_reader)
     
-    sgd = fluid.optimizer.SGD(learning_rate=1e-3)
+    sgd = fluid.optimizer.SGD(learning_rate=1e-3, parameter_list=simple_net.parameters())
     dy_loss = None
 
     for i, data in enumerate(train_reader()):
