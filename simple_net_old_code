@@ -1,0 +1,1250 @@
+startup program:
+blocks {
+  idx: 0
+  parent_idx: -1
+  vars {
+    name: "learning_rate_0"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: 1
+        }
+      }
+    }
+    persistable: true
+  }
+  vars {
+    name: "fc_0.b_0"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: 1
+        }
+      }
+    }
+    persistable: true
+  }
+  vars {
+    name: "fc_0.w_0"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: 13
+          dims: 1
+        }
+      }
+    }
+    persistable: true
+  }
+  ops {
+    outputs {
+      parameter: "Out"
+      arguments: "learning_rate_0"
+    }
+    type: "fill_constant"
+    attrs {
+      name: "op_device"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "op_role_var"
+      type: STRINGS
+    }
+    attrs {
+      name: "op_callstack"
+      type: STRINGS
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/framework.py\", line 2628, in _prepend_op\n    attrs=kwargs.get(\"attrs\", None))\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/initializer.py\", line 147, in __call__\n    stop_gradient=True)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/framework.py\", line 2389, in create_var\n    kwargs[\'initializer\'](var, self)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layer_helper_base.py\", line 420, in set_variable_initializer\n    initializer=initializer)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layers/tensor.py\", line 191, in create_global_var\n    value=float(value), force_cpu=force_cpu))\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/optimizer.py\", line 287, in _create_global_learning_rate\n    persistable=True)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/optimizer.py\", line 534, in _create_optimization_pass\n    self._create_global_learning_rate()\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/optimizer.py\", line 711, in apply_gradients\n    optimize_ops = self._create_optimization_pass(params_grads)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/optimizer.py\", line 741, in apply_optimize\n    optimize_ops = self.apply_gradients(params_grads)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/optimizer.py\", line 838, in minimize\n    loss, startup_program=startup_program, params_grads=params_grads)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/dygraph/base.py\", line 203, in __impl__\n    return func(*args, **kwargs)\n"
+      strings: "  File \"</usr/local/lib/python3.5/dist-packages/decorator.py:decorator-gen-66>\", line 2, in minimize\n"
+      strings: "  File \"simple_net_print.py\", line 19, in <module>\n    fluid.optimizer.SGD(learning_rate=0.01).minimize(avg_loss)\n"
+    }
+    attrs {
+      name: "op_namescope"
+      type: STRING
+      s: "/"
+    }
+    attrs {
+      name: "op_role"
+      type: INT
+      i: 0
+    }
+    attrs {
+      name: "dtype"
+      type: INT
+      i: 5
+    }
+    attrs {
+      name: "str_value"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "value"
+      type: FLOAT
+      f: 0.009999999776482582
+    }
+    attrs {
+      name: "shape"
+      type: LONGS
+      longs: 1
+    }
+    attrs {
+      name: "force_cpu"
+      type: BOOLEAN
+      b: false
+    }
+  }
+  ops {
+    outputs {
+      parameter: "Out"
+      arguments: "fc_0.b_0"
+    }
+    type: "fill_constant"
+    attrs {
+      name: "op_device"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "op_role_var"
+      type: STRINGS
+    }
+    attrs {
+      name: "op_callstack"
+      type: STRINGS
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/framework.py\", line 2628, in _prepend_op\n    attrs=kwargs.get(\"attrs\", None))\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/initializer.py\", line 147, in __call__\n    stop_gradient=True)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/framework.py\", line 2510, in create_parameter\n    initializer(param, self)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layer_helper_base.py\", line 353, in create_parameter\n    **attr._to_kwargs(with_initializer=True))\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layer_helper.py\", line 128, in append_bias_op\n    attr=bias_attr, shape=size, dtype=input_var.dtype, is_bias=True)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layers/nn.py\", line 358, in fc\n    pre_activation = helper.append_bias_op(pre_bias, dim_start=num_flatten_dims)\n"
+      strings: "  File \"simple_net_print.py\", line 14, in <module>\n    y_ = fluid.layers.fc(input=x, size=1, act=None)\n"
+    }
+    attrs {
+      name: "op_namescope"
+      type: STRING
+      s: "/"
+    }
+    attrs {
+      name: "op_role"
+      type: INT
+      i: 0
+    }
+    attrs {
+      name: "dtype"
+      type: INT
+      i: 5
+    }
+    attrs {
+      name: "str_value"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "value"
+      type: FLOAT
+      f: 0.0
+    }
+    attrs {
+      name: "shape"
+      type: LONGS
+      longs: 1
+    }
+    attrs {
+      name: "force_cpu"
+      type: BOOLEAN
+      b: false
+    }
+  }
+  ops {
+    inputs {
+      parameter: "ShapeTensor"
+    }
+    inputs {
+      parameter: "ShapeTensorList"
+    }
+    outputs {
+      parameter: "Out"
+      arguments: "fc_0.w_0"
+    }
+    type: "uniform_random"
+    attrs {
+      name: "op_device"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "op_role_var"
+      type: STRINGS
+    }
+    attrs {
+      name: "diag_val"
+      type: FLOAT
+      f: 1.0
+    }
+    attrs {
+      name: "seed"
+      type: INT
+      i: 0
+    }
+    attrs {
+      name: "max"
+      type: FLOAT
+      f: 0.6546536684036255
+    }
+    attrs {
+      name: "shape"
+      type: LONGS
+      longs: 13
+      longs: 1
+    }
+    attrs {
+      name: "dtype"
+      type: INT
+      i: 5
+    }
+    attrs {
+      name: "op_role"
+      type: INT
+      i: 0
+    }
+    attrs {
+      name: "min"
+      type: FLOAT
+      f: -0.6546536684036255
+    }
+    attrs {
+      name: "op_namescope"
+      type: STRING
+      s: "/"
+    }
+    attrs {
+      name: "op_callstack"
+      type: STRINGS
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/framework.py\", line 2628, in _prepend_op\n    attrs=kwargs.get(\"attrs\", None))\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/initializer.py\", line 542, in __call__\n    stop_gradient=True)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/framework.py\", line 2510, in create_parameter\n    initializer(param, self)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layer_helper_base.py\", line 353, in create_parameter\n    **attr._to_kwargs(with_initializer=True))\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layers/nn.py\", line 337, in fc\n    attr=param_attr, shape=param_shape, dtype=dtype, is_bias=False)\n"
+      strings: "  File \"simple_net_print.py\", line 14, in <module>\n    y_ = fluid.layers.fc(input=x, size=1, act=None)\n"
+    }
+    attrs {
+      name: "diag_num"
+      type: INT
+      i: 0
+    }
+    attrs {
+      name: "diag_step"
+      type: INT
+      i: 0
+    }
+  }
+}
+version {
+  version: 0
+}
+
+main program:
+blocks {
+  idx: 0
+  parent_idx: -1
+  vars {
+    name: "fc_0.b_0@GRAD"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: 1
+        }
+        lod_level: 0
+      }
+    }
+  }
+  vars {
+    name: "square_error_cost_0.tmp_0@GRAD"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: -1
+          dims: 1
+        }
+        lod_level: 0
+      }
+    }
+  }
+  vars {
+    name: "square_error_cost_0.tmp_1@GRAD"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: -1
+          dims: 1
+        }
+        lod_level: 0
+      }
+    }
+  }
+  vars {
+    name: "fc_0.w_0@GRAD"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: 13
+          dims: 1
+        }
+      }
+    }
+  }
+  vars {
+    name: "fc_0.tmp_0"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: -1
+          dims: 1
+        }
+        lod_level: 0
+      }
+    }
+    persistable: false
+  }
+  vars {
+    name: "fc_0.w_0"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: 13
+          dims: 1
+        }
+      }
+    }
+    persistable: true
+  }
+  vars {
+    name: "mean_0.tmp_0"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: 1
+        }
+      }
+    }
+    persistable: false
+  }
+  vars {
+    name: "Y"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: -1
+          dims: 1
+        }
+        lod_level: 0
+      }
+    }
+    persistable: false
+  }
+  vars {
+    name: "mean_0.tmp_0@GRAD"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: 1
+        }
+      }
+    }
+  }
+  vars {
+    name: "X"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: -1
+          dims: 13
+        }
+        lod_level: 0
+      }
+    }
+    persistable: false
+  }
+  vars {
+    name: "fc_0.b_0"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: 1
+        }
+      }
+    }
+    persistable: true
+  }
+  vars {
+    name: "fc_0.tmp_1"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: -1
+          dims: 1
+        }
+        lod_level: 0
+      }
+    }
+    persistable: false
+  }
+  vars {
+    name: "square_error_cost_0.tmp_0"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: -1
+          dims: 1
+        }
+        lod_level: 0
+      }
+    }
+    persistable: false
+  }
+  vars {
+    name: "learning_rate_0"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: 1
+        }
+      }
+    }
+    persistable: true
+  }
+  vars {
+    name: "fc_0.tmp_0@GRAD"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: -1
+          dims: 1
+        }
+        lod_level: 0
+      }
+    }
+  }
+  vars {
+    name: "fc_0.tmp_1@GRAD"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: -1
+          dims: 1
+        }
+        lod_level: 0
+      }
+    }
+  }
+  vars {
+    name: "square_error_cost_0.tmp_1"
+    type {
+      type: LOD_TENSOR
+      lod_tensor {
+        tensor {
+          data_type: FP32
+          dims: -1
+          dims: 1
+        }
+        lod_level: 0
+      }
+    }
+    persistable: false
+  }
+  ops {
+    inputs {
+      parameter: "X"
+      arguments: "X"
+    }
+    inputs {
+      parameter: "Y"
+      arguments: "fc_0.w_0"
+    }
+    outputs {
+      parameter: "Out"
+      arguments: "fc_0.tmp_0"
+    }
+    type: "mul"
+    attrs {
+      name: "op_role_var"
+      type: STRINGS
+    }
+    attrs {
+      name: "op_role"
+      type: INT
+      i: 0
+    }
+    attrs {
+      name: "y_num_col_dims"
+      type: INT
+      i: 1
+    }
+    attrs {
+      name: "op_namescope"
+      type: STRING
+      s: "/"
+    }
+    attrs {
+      name: "op_device"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "x_num_col_dims"
+      type: INT
+      i: 1
+    }
+    attrs {
+      name: "force_fp32_output"
+      type: BOOLEAN
+      b: false
+    }
+    attrs {
+      name: "op_callstack"
+      type: STRINGS
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/framework.py\", line 2559, in append_op\n    attrs=kwargs.get(\"attrs\", None))\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layer_helper.py\", line 43, in append_op\n    return self.main_program.current_block().append_op(*args, **kwargs)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layers/nn.py\", line 345, in fc\n    \"y_num_col_dims\": 1})\n"
+      strings: "  File \"simple_net_print.py\", line 14, in <module>\n    y_ = fluid.layers.fc(input=x, size=1, act=None)\n"
+    }
+    attrs {
+      name: "use_mkldnn"
+      type: BOOLEAN
+      b: false
+    }
+    attrs {
+      name: "scale_out"
+      type: FLOAT
+      f: 1.0
+    }
+    attrs {
+      name: "scale_x"
+      type: FLOAT
+      f: 1.0
+    }
+    attrs {
+      name: "scale_y"
+      type: FLOATS
+      floats: 1.0
+    }
+  }
+  ops {
+    inputs {
+      parameter: "X"
+      arguments: "fc_0.tmp_0"
+    }
+    inputs {
+      parameter: "Y"
+      arguments: "fc_0.b_0"
+    }
+    outputs {
+      parameter: "Out"
+      arguments: "fc_0.tmp_1"
+    }
+    type: "elementwise_add"
+    attrs {
+      name: "op_device"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "y_data_format"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "x_data_format"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "use_mkldnn"
+      type: BOOLEAN
+      b: false
+    }
+    attrs {
+      name: "axis"
+      type: INT
+      i: 1
+    }
+    attrs {
+      name: "op_role"
+      type: INT
+      i: 0
+    }
+    attrs {
+      name: "op_role_var"
+      type: STRINGS
+    }
+    attrs {
+      name: "op_callstack"
+      type: STRINGS
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/framework.py\", line 2559, in append_op\n    attrs=kwargs.get(\"attrs\", None))\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layer_helper.py\", line 43, in append_op\n    return self.main_program.current_block().append_op(*args, **kwargs)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layer_helper.py\", line 135, in append_bias_op\n    attrs={\'axis\': dim_start})\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layers/nn.py\", line 358, in fc\n    pre_activation = helper.append_bias_op(pre_bias, dim_start=num_flatten_dims)\n"
+      strings: "  File \"simple_net_print.py\", line 14, in <module>\n    y_ = fluid.layers.fc(input=x, size=1, act=None)\n"
+    }
+    attrs {
+      name: "op_namescope"
+      type: STRING
+      s: "/"
+    }
+  }
+  ops {
+    inputs {
+      parameter: "X"
+      arguments: "fc_0.tmp_1"
+    }
+    inputs {
+      parameter: "Y"
+      arguments: "Y"
+    }
+    outputs {
+      parameter: "Out"
+      arguments: "square_error_cost_0.tmp_0"
+    }
+    type: "elementwise_sub"
+    attrs {
+      name: "op_device"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "y_data_format"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "x_data_format"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "use_mkldnn"
+      type: BOOLEAN
+      b: false
+    }
+    attrs {
+      name: "op_role"
+      type: INT
+      i: 0
+    }
+    attrs {
+      name: "op_role_var"
+      type: STRINGS
+    }
+    attrs {
+      name: "op_callstack"
+      type: STRINGS
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/framework.py\", line 2559, in append_op\n    attrs=kwargs.get(\"attrs\", None))\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layer_helper.py\", line 43, in append_op\n    return self.main_program.current_block().append_op(*args, **kwargs)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layers/loss.py\", line 353, in square_error_cost\n    outputs={\'Out\': [minus_out]})\n"
+      strings: "  File \"simple_net_print.py\", line 16, in <module>\n    loss = fluid.layers.square_error_cost(input=y_, label=y)\n"
+    }
+    attrs {
+      name: "op_namescope"
+      type: STRING
+      s: "/"
+    }
+    attrs {
+      name: "axis"
+      type: INT
+      i: -1
+    }
+  }
+  ops {
+    inputs {
+      parameter: "X"
+      arguments: "square_error_cost_0.tmp_0"
+    }
+    outputs {
+      parameter: "Out"
+      arguments: "square_error_cost_0.tmp_1"
+    }
+    type: "square"
+    attrs {
+      name: "op_device"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "use_cudnn"
+      type: BOOLEAN
+      b: false
+    }
+    attrs {
+      name: "op_role"
+      type: INT
+      i: 0
+    }
+    attrs {
+      name: "op_role_var"
+      type: STRINGS
+    }
+    attrs {
+      name: "op_callstack"
+      type: STRINGS
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/framework.py\", line 2559, in append_op\n    attrs=kwargs.get(\"attrs\", None))\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layer_helper.py\", line 43, in append_op\n    return self.main_program.current_block().append_op(*args, **kwargs)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layers/loss.py\", line 358, in square_error_cost\n    outputs={\'Out\': [square_out]})\n"
+      strings: "  File \"simple_net_print.py\", line 16, in <module>\n    loss = fluid.layers.square_error_cost(input=y_, label=y)\n"
+    }
+    attrs {
+      name: "op_namescope"
+      type: STRING
+      s: "/"
+    }
+    attrs {
+      name: "use_mkldnn"
+      type: BOOLEAN
+      b: false
+    }
+  }
+  ops {
+    inputs {
+      parameter: "X"
+      arguments: "square_error_cost_0.tmp_1"
+    }
+    outputs {
+      parameter: "Out"
+      arguments: "mean_0.tmp_0"
+    }
+    type: "mean"
+    attrs {
+      name: "op_device"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "op_role"
+      type: INT
+      i: 256
+    }
+    attrs {
+      name: "op_callstack"
+      type: STRINGS
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/framework.py\", line 2559, in append_op\n    attrs=kwargs.get(\"attrs\", None))\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layer_helper.py\", line 43, in append_op\n    return self.main_program.current_block().append_op(*args, **kwargs)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layers/nn.py\", line 11756, in mean\n    type=\"mean\", inputs={\"X\": x}, attrs={}, outputs={\"Out\": out})\n"
+      strings: "  File \"simple_net_print.py\", line 17, in <module>\n    avg_loss = fluid.layers.mean(loss)\n"
+    }
+    attrs {
+      name: "op_namescope"
+      type: STRING
+      s: "/"
+    }
+    attrs {
+      name: "op_role_var"
+      type: STRINGS
+    }
+  }
+  ops {
+    outputs {
+      parameter: "Out"
+      arguments: "mean_0.tmp_0@GRAD"
+    }
+    type: "fill_constant"
+    attrs {
+      name: "shape"
+      type: LONGS
+      longs: 1
+    }
+    attrs {
+      name: "value"
+      type: FLOAT
+      f: 1.0
+    }
+    attrs {
+      name: "dtype"
+      type: INT
+      i: 5
+    }
+    attrs {
+      name: "op_device"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "force_cpu"
+      type: BOOLEAN
+      b: false
+    }
+    attrs {
+      name: "op_role"
+      type: INT
+      i: 257
+    }
+  }
+  ops {
+    inputs {
+      parameter: "Out@GRAD"
+      arguments: "mean_0.tmp_0@GRAD"
+    }
+    inputs {
+      parameter: "X"
+      arguments: "square_error_cost_0.tmp_1"
+    }
+    outputs {
+      parameter: "X@GRAD"
+      arguments: "square_error_cost_0.tmp_1@GRAD"
+    }
+    type: "mean_grad"
+    attrs {
+      name: "op_role"
+      type: INT
+      i: 1
+    }
+    attrs {
+      name: "op_device"
+      type: STRING
+      s: ""
+    }
+  }
+  ops {
+    inputs {
+      parameter: "Out@GRAD"
+      arguments: "square_error_cost_0.tmp_1@GRAD"
+    }
+    inputs {
+      parameter: "X"
+      arguments: "square_error_cost_0.tmp_0"
+    }
+    outputs {
+      parameter: "X@GRAD"
+      arguments: "square_error_cost_0.tmp_0@GRAD"
+    }
+    type: "square_grad"
+    attrs {
+      name: "op_device"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "use_cudnn"
+      type: BOOLEAN
+      b: false
+    }
+    attrs {
+      name: "op_role"
+      type: INT
+      i: 1
+    }
+    attrs {
+      name: "op_role_var"
+      type: STRINGS
+    }
+    attrs {
+      name: "op_callstack"
+      type: STRINGS
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/framework.py\", line 2559, in append_op\n    attrs=kwargs.get(\"attrs\", None))\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layer_helper.py\", line 43, in append_op\n    return self.main_program.current_block().append_op(*args, **kwargs)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layers/loss.py\", line 358, in square_error_cost\n    outputs={\'Out\': [square_out]})\n"
+      strings: "  File \"simple_net_print.py\", line 16, in <module>\n    loss = fluid.layers.square_error_cost(input=y_, label=y)\n"
+    }
+    attrs {
+      name: "op_namescope"
+      type: STRING
+      s: "/"
+    }
+    attrs {
+      name: "use_mkldnn"
+      type: BOOLEAN
+      b: false
+    }
+  }
+  ops {
+    inputs {
+      parameter: "Out@GRAD"
+      arguments: "square_error_cost_0.tmp_0@GRAD"
+    }
+    inputs {
+      parameter: "X"
+      arguments: "fc_0.tmp_1"
+    }
+    inputs {
+      parameter: "Y"
+      arguments: "Y"
+    }
+    outputs {
+      parameter: "X@GRAD"
+      arguments: "fc_0.tmp_1@GRAD"
+    }
+    outputs {
+      parameter: "Y@GRAD"
+    }
+    type: "elementwise_sub_grad"
+    attrs {
+      name: "op_device"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "y_data_format"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "x_data_format"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "use_mkldnn"
+      type: BOOLEAN
+      b: false
+    }
+    attrs {
+      name: "op_role"
+      type: INT
+      i: 1
+    }
+    attrs {
+      name: "op_role_var"
+      type: STRINGS
+    }
+    attrs {
+      name: "op_callstack"
+      type: STRINGS
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/framework.py\", line 2559, in append_op\n    attrs=kwargs.get(\"attrs\", None))\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layer_helper.py\", line 43, in append_op\n    return self.main_program.current_block().append_op(*args, **kwargs)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layers/loss.py\", line 353, in square_error_cost\n    outputs={\'Out\': [minus_out]})\n"
+      strings: "  File \"simple_net_print.py\", line 16, in <module>\n    loss = fluid.layers.square_error_cost(input=y_, label=y)\n"
+    }
+    attrs {
+      name: "op_namescope"
+      type: STRING
+      s: "/"
+    }
+    attrs {
+      name: "axis"
+      type: INT
+      i: -1
+    }
+  }
+  ops {
+    inputs {
+      parameter: "Out@GRAD"
+      arguments: "fc_0.tmp_1@GRAD"
+    }
+    inputs {
+      parameter: "X"
+      arguments: "fc_0.tmp_0"
+    }
+    inputs {
+      parameter: "Y"
+      arguments: "fc_0.b_0"
+    }
+    outputs {
+      parameter: "X@GRAD"
+      arguments: "fc_0.tmp_0@GRAD"
+    }
+    outputs {
+      parameter: "Y@GRAD"
+      arguments: "fc_0.b_0@GRAD"
+    }
+    type: "elementwise_add_grad"
+    attrs {
+      name: "op_device"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "y_data_format"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "x_data_format"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "use_mkldnn"
+      type: BOOLEAN
+      b: false
+    }
+    attrs {
+      name: "axis"
+      type: INT
+      i: 1
+    }
+    attrs {
+      name: "op_role"
+      type: INT
+      i: 1
+    }
+    attrs {
+      name: "op_role_var"
+      type: STRINGS
+      strings: "fc_0.b_0"
+      strings: "fc_0.b_0@GRAD"
+    }
+    attrs {
+      name: "op_callstack"
+      type: STRINGS
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/framework.py\", line 2559, in append_op\n    attrs=kwargs.get(\"attrs\", None))\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layer_helper.py\", line 43, in append_op\n    return self.main_program.current_block().append_op(*args, **kwargs)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layer_helper.py\", line 135, in append_bias_op\n    attrs={\'axis\': dim_start})\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layers/nn.py\", line 358, in fc\n    pre_activation = helper.append_bias_op(pre_bias, dim_start=num_flatten_dims)\n"
+      strings: "  File \"simple_net_print.py\", line 14, in <module>\n    y_ = fluid.layers.fc(input=x, size=1, act=None)\n"
+    }
+    attrs {
+      name: "op_namescope"
+      type: STRING
+      s: "/"
+    }
+  }
+  ops {
+    inputs {
+      parameter: "Out@GRAD"
+      arguments: "fc_0.tmp_0@GRAD"
+    }
+    inputs {
+      parameter: "X"
+      arguments: "X"
+    }
+    inputs {
+      parameter: "Y"
+      arguments: "fc_0.w_0"
+    }
+    outputs {
+      parameter: "X@GRAD"
+    }
+    outputs {
+      parameter: "Y@GRAD"
+      arguments: "fc_0.w_0@GRAD"
+    }
+    type: "mul_grad"
+    attrs {
+      name: "op_role_var"
+      type: STRINGS
+      strings: "fc_0.w_0"
+      strings: "fc_0.w_0@GRAD"
+    }
+    attrs {
+      name: "op_role"
+      type: INT
+      i: 1
+    }
+    attrs {
+      name: "y_num_col_dims"
+      type: INT
+      i: 1
+    }
+    attrs {
+      name: "op_namescope"
+      type: STRING
+      s: "/"
+    }
+    attrs {
+      name: "op_device"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "x_num_col_dims"
+      type: INT
+      i: 1
+    }
+    attrs {
+      name: "force_fp32_output"
+      type: BOOLEAN
+      b: false
+    }
+    attrs {
+      name: "op_callstack"
+      type: STRINGS
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/framework.py\", line 2559, in append_op\n    attrs=kwargs.get(\"attrs\", None))\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layer_helper.py\", line 43, in append_op\n    return self.main_program.current_block().append_op(*args, **kwargs)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/layers/nn.py\", line 345, in fc\n    \"y_num_col_dims\": 1})\n"
+      strings: "  File \"simple_net_print.py\", line 14, in <module>\n    y_ = fluid.layers.fc(input=x, size=1, act=None)\n"
+    }
+    attrs {
+      name: "use_mkldnn"
+      type: BOOLEAN
+      b: false
+    }
+    attrs {
+      name: "scale_out"
+      type: FLOAT
+      f: 1.0
+    }
+    attrs {
+      name: "scale_x"
+      type: FLOAT
+      f: 1.0
+    }
+    attrs {
+      name: "scale_y"
+      type: FLOATS
+      floats: 1.0
+    }
+  }
+  ops {
+    inputs {
+      parameter: "Grad"
+      arguments: "fc_0.b_0@GRAD"
+    }
+    inputs {
+      parameter: "LearningRate"
+      arguments: "learning_rate_0"
+    }
+    inputs {
+      parameter: "Param"
+      arguments: "fc_0.b_0"
+    }
+    outputs {
+      parameter: "ParamOut"
+      arguments: "fc_0.b_0"
+    }
+    type: "sgd"
+    attrs {
+      name: "op_device"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "op_role"
+      type: INT
+      i: 2
+    }
+    attrs {
+      name: "op_callstack"
+      type: STRINGS
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/framework.py\", line 2559, in append_op\n    attrs=kwargs.get(\"attrs\", None))\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/optimizer.py\", line 926, in _append_optimize_op\n    stop_gradient=True)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/dygraph/base.py\", line 203, in __impl__\n    return func(*args, **kwargs)\n"
+      strings: "  File \"</usr/local/lib/python3.5/dist-packages/decorator.py:decorator-gen-68>\", line 2, in _append_optimize_op\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/optimizer.py\", line 553, in _create_optimization_pass\n    target_block, param_and_grad)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/optimizer.py\", line 711, in apply_gradients\n    optimize_ops = self._create_optimization_pass(params_grads)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/optimizer.py\", line 741, in apply_optimize\n    optimize_ops = self.apply_gradients(params_grads)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/optimizer.py\", line 838, in minimize\n    loss, startup_program=startup_program, params_grads=params_grads)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/dygraph/base.py\", line 203, in __impl__\n    return func(*args, **kwargs)\n"
+      strings: "  File \"</usr/local/lib/python3.5/dist-packages/decorator.py:decorator-gen-66>\", line 2, in minimize\n"
+      strings: "  File \"simple_net_print.py\", line 19, in <module>\n    fluid.optimizer.SGD(learning_rate=0.01).minimize(avg_loss)\n"
+    }
+    attrs {
+      name: "op_role_var"
+      type: STRINGS
+      strings: "fc_0.b_0"
+      strings: "fc_0.b_0@GRAD"
+    }
+    attrs {
+      name: "op_namescope"
+      type: STRING
+      s: "/optimizer/"
+    }
+  }
+  ops {
+    inputs {
+      parameter: "Grad"
+      arguments: "fc_0.w_0@GRAD"
+    }
+    inputs {
+      parameter: "LearningRate"
+      arguments: "learning_rate_0"
+    }
+    inputs {
+      parameter: "Param"
+      arguments: "fc_0.w_0"
+    }
+    outputs {
+      parameter: "ParamOut"
+      arguments: "fc_0.w_0"
+    }
+    type: "sgd"
+    attrs {
+      name: "op_device"
+      type: STRING
+      s: ""
+    }
+    attrs {
+      name: "op_role"
+      type: INT
+      i: 2
+    }
+    attrs {
+      name: "op_callstack"
+      type: STRINGS
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/framework.py\", line 2559, in append_op\n    attrs=kwargs.get(\"attrs\", None))\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/optimizer.py\", line 926, in _append_optimize_op\n    stop_gradient=True)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/dygraph/base.py\", line 203, in __impl__\n    return func(*args, **kwargs)\n"
+      strings: "  File \"</usr/local/lib/python3.5/dist-packages/decorator.py:decorator-gen-68>\", line 2, in _append_optimize_op\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/optimizer.py\", line 553, in _create_optimization_pass\n    target_block, param_and_grad)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/optimizer.py\", line 711, in apply_gradients\n    optimize_ops = self._create_optimization_pass(params_grads)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/optimizer.py\", line 741, in apply_optimize\n    optimize_ops = self.apply_gradients(params_grads)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/optimizer.py\", line 838, in minimize\n    loss, startup_program=startup_program, params_grads=params_grads)\n"
+      strings: "  File \"/usr/local/lib/python3.5/dist-packages/paddle/fluid/dygraph/base.py\", line 203, in __impl__\n    return func(*args, **kwargs)\n"
+      strings: "  File \"</usr/local/lib/python3.5/dist-packages/decorator.py:decorator-gen-66>\", line 2, in minimize\n"
+      strings: "  File \"simple_net_print.py\", line 19, in <module>\n    fluid.optimizer.SGD(learning_rate=0.01).minimize(avg_loss)\n"
+    }
+    attrs {
+      name: "op_role_var"
+      type: STRINGS
+      strings: "fc_0.w_0"
+      strings: "fc_0.w_0@GRAD"
+    }
+    attrs {
+      name: "op_namescope"
+      type: STRING
+      s: "/optimizer_1/"
+    }
+  }
+}
+version {
+  version: 0
+}
+
+loss:
+1.287903

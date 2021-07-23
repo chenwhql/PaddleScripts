@@ -1,0 +1,79 @@
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+I1224 10:41:42.425400 10087 nccl_context.cc:189] init nccl context nranks: 4 local rank: 2 gpu id: 2 ring id: 0
+W1224 10:41:43.068620 10087 device_context.cc:342] Please NOTE: device: 2, GPU Compute Capability: 6.1, Driver API Version: 10.1, Runtime API Version: 10.1
+W1224 10:41:43.075037 10087 device_context.cc:352] device: 2, cuDNN Version: 7.6.
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+I1224 10:42:34.567471 10235 nccl_context.cc:189] init nccl context nranks: 4 local rank: 2 gpu id: 2 ring id: 0
+W1224 10:42:35.349776 10235 device_context.cc:342] Please NOTE: device: 2, GPU Compute Capability: 6.1, Driver API Version: 10.1, Runtime API Version: 10.1
+W1224 10:42:35.357041 10235 device_context.cc:352] device: 2, cuDNN Version: 7.6.
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+I1228 09:49:21.423979 18740 nccl_context.cc:189] init nccl context nranks: 8 local rank: 2 gpu id: 2 ring id: 0
+W1228 09:49:23.996670 18740 device_context.cc:342] Please NOTE: device: 2, GPU Compute Capability: 6.1, Driver API Version: 10.1, Runtime API Version: 10.1
+W1228 09:49:24.003814 18740 device_context.cc:352] device: 2, cuDNN Version: 7.6.
+
+
+--------------------------------------
+C++ Traceback (most recent call last):
+--------------------------------------
+0   paddle::imperative::NCCLParallelContext::Init()
+1   paddle::platform::NCCLCommContext::CreateNCCLComm(ncclUniqueId*, int, int, int, int)
+2   paddle::platform::NCCLCommContext::AssignNCCLComm(ncclComm*, int, int, int, int)
+3   paddle::platform::CUDADeviceContext::CUDADeviceContext(paddle::platform::CUDAPlace)
+4   paddle::platform::CUDAContext::CUDAContext(paddle::platform::CUDAPlace const&, paddle::platform::stream::Priority const&)
+5   paddle::platform::stream::CUDAStream::Init(paddle::platform::Place const&, paddle::platform::stream::Priority const&)
+6   paddle::framework::SignalHandle(char const*, int)
+7   paddle::platform::GetCurrentTraceBackString[abi:cxx11]()
+
+----------------------
+Error Message Summary:
+----------------------
+FatalError: `Termination signal` is detected by the operating system.
+  [TimeInfo: *** Aborted at 1609148965 (unix time) try "date -d @1609148965" if you are using GNU date ***]
+  [SignalInfo: *** SIGTERM (@0x4903) received by PID 18740 (TID 0x7fbb61c41700) from PID 18691 ***]
+
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+I1228 09:52:24.246806 18950 nccl_context.cc:189] init nccl context nranks: 8 local rank: 2 gpu id: 2 ring id: 0
+W1228 09:52:25.475600 18950 device_context.cc:342] Please NOTE: device: 2, GPU Compute Capability: 6.1, Driver API Version: 10.1, Runtime API Version: 10.1
+W1228 09:52:25.483134 18950 device_context.cc:352] device: 2, cuDNN Version: 7.6.
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+I1228 09:58:00.273648 19367 nccl_context.cc:189] init nccl context nranks: 8 local rank: 2 gpu id: 2 ring id: 0
+W1228 09:58:02.399699 19367 device_context.cc:342] Please NOTE: device: 2, GPU Compute Capability: 6.1, Driver API Version: 10.1, Runtime API Version: 10.1
+W1228 09:58:02.454900 19367 device_context.cc:352] device: 2, cuDNN Version: 7.6.
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+I1228 09:58:32.195065 19628 nccl_context.cc:189] init nccl context nranks: 4 local rank: 2 gpu id: 2 ring id: 0
+W1228 09:58:33.367734 19628 device_context.cc:342] Please NOTE: device: 2, GPU Compute Capability: 6.1, Driver API Version: 10.1, Runtime API Version: 10.1
+W1228 09:58:33.374676 19628 device_context.cc:352] device: 2, cuDNN Version: 7.6.
+I0309 07:13:37.185847   926 gen_comm_id_helper.cc:179] Server listening on: 127.0.0.1:48807 successful.
+I0309 07:13:37.642804   926 nccl_context.cc:66] init nccl context nranks: 4 local rank: 2 gpu id: 2 ring id: 0
+W0309 07:13:39.033824   926 device_context.cc:368] Please NOTE: device: 2, GPU Compute Capability: 6.1, Driver API Version: 10.2, Runtime API Version: 10.1
+W0309 07:13:39.043308   926 device_context.cc:386] device: 2, cuDNN Version: 7.6.
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):

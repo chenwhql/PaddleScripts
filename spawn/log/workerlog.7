@@ -1,0 +1,42 @@
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+I1228 09:49:21.445432 18765 nccl_context.cc:189] init nccl context nranks: 8 local rank: 7 gpu id: 7 ring id: 0
+Traceback (most recent call last):
+  File "launch.py", line 44, in <module>
+    train()
+  File "launch.py", line 20, in train
+    dist.init_parallel_env()
+  File "/usr/local/python2.7.15/lib/python2.7/site-packages/paddle/distributed/parallel.py", line 182, in init_parallel_env
+    parallel_helper._init_parallel_ctx()
+  File "/usr/local/python2.7.15/lib/python2.7/site-packages/paddle/fluid/dygraph/parallel_helper.py", line 42, in _init_parallel_ctx
+    __parallel_ctx__clz__.init()
+OSError: (External)  Nccl error, unhandled cuda error  (at /work/paddle_py2/paddle/fluid/platform/collective_helper.cc:80)
+  [Hint: If you need C++ stacktraces for debugging, please set `FLAGS_call_stack_level=2`.]
+
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+I1228 09:52:24.250772 18975 nccl_context.cc:189] init nccl context nranks: 8 local rank: 7 gpu id: 7 ring id: 0
+Traceback (most recent call last):
+  File "launch.py", line 44, in <module>
+    train()
+  File "launch.py", line 20, in train
+    dist.init_parallel_env()
+  File "/usr/local/python2.7.15/lib/python2.7/site-packages/paddle/distributed/parallel.py", line 182, in init_parallel_env
+    parallel_helper._init_parallel_ctx()
+  File "/usr/local/python2.7.15/lib/python2.7/site-packages/paddle/fluid/dygraph/parallel_helper.py", line 42, in _init_parallel_ctx
+    __parallel_ctx__clz__.init()
+OSError: (External)  Nccl error, unhandled cuda error  (at /work/paddle_py2/paddle/fluid/platform/collective_helper.cc:80)
+  [Hint: If you need C++ stacktraces for debugging, please set `FLAGS_call_stack_level=2`.]
+
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+I1228 09:58:00.293707 19392 nccl_context.cc:189] init nccl context nranks: 8 local rank: 7 gpu id: 7 ring id: 0
+Traceback (most recent call last):
+  File "launch.py", line 44, in <module>
+    train()
+  File "launch.py", line 20, in train
+    dist.init_parallel_env()
+  File "/usr/local/python3.5.1/lib/python3.5/site-packages/paddle/distributed/parallel.py", line 182, in init_parallel_env
+    parallel_helper._init_parallel_ctx()
+  File "/usr/local/python3.5.1/lib/python3.5/site-packages/paddle/fluid/dygraph/parallel_helper.py", line 42, in _init_parallel_ctx
+    __parallel_ctx__clz__.init()
+OSError: (External)  Nccl error, unhandled cuda error  (at /work/paddle/paddle/fluid/platform/collective_helper.cc:80)
+  [Hint: If you need C++ stacktraces for debugging, please set `FLAGS_call_stack_level=2`.]
+

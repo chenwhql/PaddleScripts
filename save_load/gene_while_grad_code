@@ -1,0 +1,51 @@
+{ // block 0
+    var array_read_4.tmp_0@GRAD : fluid.VarType.LOD_TENSOR.shape(10,).astype(VarType.FP32)
+    var array_write_0.out@GRAD : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+    var array_write_1.out@GRAD : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+    var d0@GRAD : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+    var d1@GRAD : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+    var d2@GRAD : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+    var fill_constant_0.tmp_0 : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+    var fill_constant_1.tmp_0@GRAD : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+
+    {Out=['array_write_0.out@GRAD']} = write_to_array(inputs={I=['fill_constant_4.tmp_0'], X=['array_read_4.tmp_0@GRAD']}, op_device = , op_namescope = /, op_role = 1, op_role_var = [])
+    {X@GRAD=['@EMPTY@', 'array_write_0.out@GRAD', 'array_write_1.out@GRAD', '@EMPTY@', '@EMPTY@', '@EMPTY@', '@EMPTY@']} = while_grad(inputs={Out=['less_than_0.tmp_0', 'fill_constant_2.tmp_0', 'array_write_0.out', 'fill_constant_4.tmp_0', 'less_than_1.tmp_0'], Out@GRAD=['sum_0.tmp_0', '_generated_var_0', 'array_write_0.out@GRAD', 'sum_1.tmp_0'], StepScopes=['_generated_var_1'], X=['fill_constant_2.tmp_0', 'array_write_0.out', 'array_write_1.out', 'fill_constant_4.tmp_0', 'fill_constant_3.tmp_0', 'fill_constant_5.tmp_0', 'less_than_1.tmp_0']}, is_test = False, op_device = , op_namescope = /, op_role = 1, op_role_var = [], original_output_grad = ['sum_0.tmp_0', '_generated_var_0', 'array_write_0.out@GRAD', 'sum_1.tmp_0'], skip_eager_deletion_vars = [], sub_block = block[1])
+    {Out=['d2@GRAD']} = read_from_array(inputs={I=['fill_constant_0.tmp_0'], X=['array_write_1.out@GRAD'], X_W=['d2']}, op_device = , op_namescope = /, op_role = 1, op_role_var = [])
+    {Out=['fill_constant_0.tmp_0']} = increment(inputs={X=['fill_constant_0.tmp_0']}, op_device = , op_role = 1, step = -1.0)
+    {Out=['d1@GRAD']} = read_from_array(inputs={I=['fill_constant_0.tmp_0'], X=['array_write_1.out@GRAD'], X_W=['d1']}, op_device = , op_namescope = /, op_role = 1, op_role_var = [])
+    {Out=['fill_constant_0.tmp_0']} = increment(inputs={X=['fill_constant_0.tmp_0']}, op_device = , op_role = 1, step = -1.0)
+    {Out=['d0@GRAD']} = read_from_array(inputs={I=['fill_constant_0.tmp_0'], X=['array_write_1.out@GRAD'], X_W=['d0']}, op_device = , op_namescope = /, op_role = 1, op_role_var = [])
+    {Out=['fill_constant_1.tmp_0@GRAD']} = read_from_array(inputs={I=['fill_constant_0.tmp_0'], X=['array_write_0.out@GRAD'], X_W=['fill_constant_1.tmp_0']}, op_device = , op_namescope = /, op_role = 1, op_role_var = [])
+}
+{ // block 1
+    var array_read_0.tmp_0@GRAD : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+    var array_read_1.tmp_0@GRAD : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+    var array_write_1.out@GRAD : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+    var array_write_1.out@GRAD@RENAME@block1@0 : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+    var array_write_1.out@GRAD@RENAME@block1@1 : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+    var fill_constant_2.tmp_0 : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+    var sum_0.tmp_0@GRAD : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+
+    {X@GRAD=['array_write_1.out@GRAD@RENAME@block1@0', '@EMPTY@', '@EMPTY@', 'array_write_0.out@GRAD']} = while_grad(inputs={Out=['less_than_1.tmp_0', 'array_write_0.out', 'fill_constant_4.tmp_0'], Out@GRAD=['sum_1.tmp_0', 'array_write_0.out@GRAD'], StepScopes=['_generated_var_0'], X=['array_write_1.out', 'fill_constant_5.tmp_0', 'fill_constant_4.tmp_0', 'array_write_0.out']}, is_test = False, op_device = , op_namescope = /, op_role = 1, op_role_var = [], original_output_grad = ['sum_1.tmp_0', 'array_write_0.out@GRAD'], skip_eager_deletion_vars = [], sub_block = block[2])
+    {Out=['sum_0.tmp_0@GRAD']} = read_from_array(inputs={I=['fill_constant_2.tmp_0'], X=['array_write_0.out@GRAD'], X_W=['sum_0.tmp_0']}, op_device = , op_namescope = /, op_role = 1, op_role_var = [])
+    {Out=['fill_constant_2.tmp_0']} = increment(inputs={X=['fill_constant_2.tmp_0']}, op_device = , op_role = 1, step = -1.0)
+    {Out=['array_read_0.tmp_0@GRAD']} = scale(inputs={X=['sum_0.tmp_0@GRAD']}, op_device = , op_role = 1, scale = 1.0)
+    {Out=['array_read_1.tmp_0@GRAD']} = scale(inputs={X=['sum_0.tmp_0@GRAD']}, op_device = , op_role = 1, scale = 1.0)
+    {Out=['array_write_0.out@GRAD']} = write_to_array(inputs={I=['fill_constant_2.tmp_0'], X=['array_read_1.tmp_0@GRAD']}, op_device = , op_namescope = /, op_role = 1, op_role_var = [])
+    {Out=['array_write_1.out@GRAD@RENAME@block1@1']} = write_to_array(inputs={I=['fill_constant_2.tmp_0'], X=['array_read_0.tmp_0@GRAD']}, op_device = , op_namescope = /, op_role = 1, op_role_var = [])
+    {Out=['array_write_1.out@GRAD']} = sum(inputs={X=['array_write_1.out@GRAD@RENAME@block1@0', 'array_write_1.out@GRAD@RENAME@block1@1']}, op_role = 1, use_mkldnn = False)
+}
+{ // block 2
+    var array_read_2.tmp_0@GRAD : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+    var array_read_3.tmp_0@GRAD : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+    var array_write_1.out@GRAD : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+    var fill_constant_4.tmp_0 : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+    var sum_1.tmp_0@GRAD : fluid.VarType.LOD_TENSOR.shape().astype(VarType.BOOL)
+
+    {Out=['sum_1.tmp_0@GRAD']} = read_from_array(inputs={I=['fill_constant_4.tmp_0'], X=['array_write_0.out@GRAD'], X_W=['sum_1.tmp_0']}, op_device = , op_namescope = /, op_role = 1, op_role_var = [])
+    {Out=['fill_constant_4.tmp_0']} = increment(inputs={X=['fill_constant_4.tmp_0']}, op_device = , op_role = 1, step = -1.0)
+    {Out=['array_read_2.tmp_0@GRAD']} = scale(inputs={X=['sum_1.tmp_0@GRAD']}, op_device = , op_role = 1, scale = 1.0)
+    {Out=['array_read_3.tmp_0@GRAD']} = scale(inputs={X=['sum_1.tmp_0@GRAD']}, op_device = , op_role = 1, scale = 1.0)
+    {Out=['array_write_0.out@GRAD']} = write_to_array(inputs={I=['fill_constant_4.tmp_0'], X=['array_read_3.tmp_0@GRAD']}, op_device = , op_namescope = /, op_role = 1, op_role_var = [])
+    {Out=['array_write_1.out@GRAD']} = write_to_array(inputs={I=['fill_constant_4.tmp_0'], X=['array_read_2.tmp_0@GRAD']}, op_device = , op_namescope = /, op_role = 1, op_role_var = [])
+}

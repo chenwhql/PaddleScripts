@@ -1,0 +1,45 @@
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+{ // block 0
+    var x : fluid.VarType.LOD_TENSOR.shape(5,).astype(VarType.INT32)
+    var fill_constant_0.tmp_0 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.INT32)
+    var assign_0.tmp_0 : fluid.VarType.LOD_TENSOR.shape(5,).astype(VarType.INT32)
+    var shape_0.tmp_0 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.INT32)
+    var fill_constant_1.tmp_0 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.INT32)
+    var tmp_0 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.INT32)
+    var shape_0.tmp_0_slice_0 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.INT32)
+    var tmp_1 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.BOOL)
+    var _generated_var_2 : fluid.VarType.STEP_SCOPES)
+
+    {Out=['fill_constant_0.tmp_0']} = fill_constant(inputs={ShapeTensor=[], ShapeTensorList=[], ValueTensor=[]}, dtype = 2, force_cpu = False, op_device = , op_namescope = /, op_role = 0, op_role_var = [], shape = [1], str_value = 0, value = 0.0)
+    {Out=['assign_0.tmp_0']} = assign(inputs={X=['x']}, op_device = , op_namescope = /, op_role = 0, op_role_var = [])
+    {Out=['shape_0.tmp_0']} = shape(inputs={Input=['assign_0.tmp_0']}, op_device = , op_namescope = /, op_role = 0, op_role_var = [])
+    {Out=['fill_constant_1.tmp_0']} = fill_constant(inputs={ShapeTensor=[], ShapeTensorList=[], ValueTensor=[]}, dtype = 2, force_cpu = False, op_device = , op_namescope = /, op_role = 0, op_role_var = [], shape = [1], str_value = 0, value = 0.0)
+    {Out=['tmp_0']} = scale(inputs={ScaleTensor=[], X=['fill_constant_1.tmp_0']}, bias = 1.0, bias_after_scale = True, op_device = , op_namescope = /, op_role = 0, op_role_var = [], scale = 1.0)
+    {Out=['shape_0.tmp_0_slice_0']} = slice(inputs={EndsTensor=[], EndsTensorList=[], Input=['shape_0.tmp_0'], StartsTensor=[], StartsTensorList=[]}, axes = [0], decrease_axis = [0], ends = [1], infer_flags = [1], op_device = , op_namescope = /, op_role = 0, op_role_var = [], starts = [0])
+    {Out=['tmp_1']} = less_equal(inputs={X=['tmp_0'], Y=['shape_0.tmp_0_slice_0']}, axis = -1, force_cpu = False, op_device = , op_namescope = /, op_role = 0, op_role_var = [])
+    {Out=['fill_constant_0.tmp_0', 'tmp_1', 'fill_constant_1.tmp_0'], StepScopes=['_generated_var_2']} = while(inputs={Condition=['tmp_1'], X=['shape_0.tmp_0', 'fill_constant_1.tmp_0', 'assign_0.tmp_0', 'fill_constant_0.tmp_0']}, is_test = False, op_device = , op_namescope = /, op_role = 0, op_role_var = [], skip_eager_deletion_vars = [], sub_block = block[1])
+}
+{ // block 1
+    var _generated_var_0 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.INT32)
+    var _generated_var_1 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.INT32)
+    var assign_0.tmp_0_slice_0 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.INT32)
+    var tmp_2 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.INT32)
+    var tmp_3 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.INT32)
+    var tmp_4 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.INT32)
+    var shape_0.tmp_0_slice_1 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.INT32)
+    var tmp_5 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.BOOL)
+
+    {Out=['_generated_var_0']} = fill_constant(inputs={ShapeTensor=[], ShapeTensorList=[], ValueTensor=[]}, dtype = 2, force_cpu = True, op_device = , op_namescope = /, op_role = 0, op_role_var = [], shape = [1], str_value = , value = 1.0)
+    {Out=['_generated_var_1']} = elementwise_add(inputs={X=['fill_constant_1.tmp_0'], Y=['_generated_var_0']}, axis = -1, op_device = , op_namescope = /, op_role = 0, op_role_var = [], use_mkldnn = False, x_data_format = , y_data_format = )
+    {Out=['assign_0.tmp_0_slice_0']} = slice(inputs={EndsTensor=[], EndsTensorList=['_generated_var_1'], Input=['assign_0.tmp_0'], StartsTensor=[], StartsTensorList=['fill_constant_1.tmp_0']}, axes = [0], decrease_axis = [0], ends = [-1], infer_flags = [-1], op_device = , op_namescope = /, op_role = 0, op_role_var = [], starts = [-1])
+    {Out=['tmp_2']} = elementwise_add(inputs={X=['fill_constant_0.tmp_0'], Y=['assign_0.tmp_0_slice_0']}, axis = -1, op_device = , op_namescope = /, op_role = 0, op_role_var = [], use_mkldnn = False, x_data_format = , y_data_format = )
+    {Out=['tmp_3']} = scale(inputs={ScaleTensor=[], X=['fill_constant_1.tmp_0']}, bias = 1.0, bias_after_scale = True, op_device = , op_namescope = /, op_role = 0, op_role_var = [], scale = 1.0)
+    {Out=['tmp_4']} = scale(inputs={ScaleTensor=[], X=['tmp_3']}, bias = 1.0, bias_after_scale = True, op_device = , op_namescope = /, op_role = 0, op_role_var = [], scale = 1.0)
+    {Out=['shape_0.tmp_0_slice_1']} = slice(inputs={EndsTensor=[], EndsTensorList=[], Input=['shape_0.tmp_0'], StartsTensor=[], StartsTensorList=[]}, axes = [0], decrease_axis = [0], ends = [1], infer_flags = [1], op_device = , op_namescope = /, op_role = 0, op_role_var = [], starts = [0])
+    {Out=['tmp_5']} = less_equal(inputs={X=['tmp_4'], Y=['shape_0.tmp_0_slice_1']}, axis = -1, force_cpu = False, op_device = , op_namescope = /, op_role = 0, op_role_var = [])
+    {Out=['fill_constant_0.tmp_0']} = assign(inputs={X=['tmp_2']}, op_device = , op_namescope = /, op_role = 0, op_role_var = [])
+    {Out=['fill_constant_1.tmp_0']} = assign(inputs={X=['tmp_3']}, op_device = , op_namescope = /, op_role = 0, op_role_var = [])
+    {Out=['tmp_1']} = assign(inputs={X=['tmp_5']}, op_device = , op_namescope = /, op_role = 0, op_role_var = [])
+}
+
+15

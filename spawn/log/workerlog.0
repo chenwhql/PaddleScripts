@@ -1,0 +1,327 @@
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+W1224 10:41:39.425012 10077 nccl_context.cc:142] Socket connect worker 127.0.0.1:27118 failed, try again after 3 seconds.
+I1224 10:41:42.425401 10077 nccl_context.cc:189] init nccl context nranks: 4 local rank: 0 gpu id: 0 ring id: 0
+W1224 10:41:43.059643 10077 device_context.cc:342] Please NOTE: device: 0, GPU Compute Capability: 6.1, Driver API Version: 10.1, Runtime API Version: 10.1
+W1224 10:41:43.066710 10077 device_context.cc:352] device: 0, cuDNN Version: 7.6.
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+W1224 10:42:31.565582 10225 nccl_context.cc:142] Socket connect worker 127.0.0.1:10768 failed, try again after 3 seconds.
+I1224 10:42:34.568054 10225 nccl_context.cc:189] init nccl context nranks: 4 local rank: 0 gpu id: 0 ring id: 0
+W1224 10:42:35.351758 10225 device_context.cc:342] Please NOTE: device: 0, GPU Compute Capability: 6.1, Driver API Version: 10.1, Runtime API Version: 10.1
+W1224 10:42:35.358108 10225 device_context.cc:352] device: 0, cuDNN Version: 7.6.
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+W1228 09:49:18.419533 18730 nccl_context.cc:142] Socket connect worker 127.0.0.1:47080 failed, try again after 3 seconds.
+I1228 09:49:21.445186 18730 nccl_context.cc:189] init nccl context nranks: 8 local rank: 0 gpu id: 0 ring id: 0
+Traceback (most recent call last):
+  File "launch.py", line 44, in <module>
+    train()
+  File "launch.py", line 20, in train
+    dist.init_parallel_env()
+  File "/usr/local/python2.7.15/lib/python2.7/site-packages/paddle/distributed/parallel.py", line 182, in init_parallel_env
+    parallel_helper._init_parallel_ctx()
+  File "/usr/local/python2.7.15/lib/python2.7/site-packages/paddle/fluid/dygraph/parallel_helper.py", line 42, in _init_parallel_ctx
+    __parallel_ctx__clz__.init()
+OSError: (External)  Nccl error, unhandled cuda error  (at /work/paddle_py2/paddle/fluid/platform/collective_helper.cc:80)
+  [Hint: If you need C++ stacktraces for debugging, please set `FLAGS_call_stack_level=2`.]
+
+
+
+--------------------------------------
+C++ Traceback (most recent call last):
+--------------------------------------
+0   paddle::framework::SignalHandle(char const*, int)
+1   paddle::platform::GetCurrentTraceBackString[abi:cxx11]()
+
+----------------------
+Error Message Summary:
+----------------------
+FatalError: `Termination signal` is detected by the operating system.
+  [TimeInfo: *** Aborted at 1609148963 (unix time) try "date -d @1609148963" if you are using GNU date ***]
+  [SignalInfo: *** SIGTERM (@0x492a) received by PID 18851 (TID 0x7fa4744cf700) from PID 18730 ***]
+
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+W1228 09:52:21.246333 18940 nccl_context.cc:142] Socket connect worker 127.0.0.1:24120 failed, try again after 3 seconds.
+I1228 09:52:24.248297 18940 nccl_context.cc:189] init nccl context nranks: 8 local rank: 0 gpu id: 0 ring id: 0
+Traceback (most recent call last):
+  File "launch.py", line 44, in <module>
+    train()
+  File "launch.py", line 20, in train
+    dist.init_parallel_env()
+  File "/usr/local/python2.7.15/lib/python2.7/site-packages/paddle/distributed/parallel.py", line 182, in init_parallel_env
+    parallel_helper._init_parallel_ctx()
+  File "/usr/local/python2.7.15/lib/python2.7/site-packages/paddle/fluid/dygraph/parallel_helper.py", line 42, in _init_parallel_ctx
+    __parallel_ctx__clz__.init()
+OSError: (External)  Nccl error, unhandled cuda error  (at /work/paddle_py2/paddle/fluid/platform/collective_helper.cc:80)
+  [Hint: If you need C++ stacktraces for debugging, please set `FLAGS_call_stack_level=2`.]
+
+
+
+--------------------------------------
+C++ Traceback (most recent call last):
+--------------------------------------
+0   paddle::framework::SignalHandle(char const*, int)
+1   paddle::platform::GetCurrentTraceBackString[abi:cxx11]()
+
+----------------------
+Error Message Summary:
+----------------------
+FatalError: `Termination signal` is detected by the operating system.
+  [TimeInfo: *** Aborted at 1609149145 (unix time) try "date -d @1609149145" if you are using GNU date ***]
+  [SignalInfo: *** SIGTERM (@0x49fc) received by PID 19053 (TID 0x7f7039ea9700) from PID 18940 ***]
+
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+W1228 09:57:57.273160 19357 nccl_context.cc:142] Socket connect worker 127.0.0.1:41318 failed, try again after 3 seconds.
+I1228 09:58:00.292518 19357 nccl_context.cc:189] init nccl context nranks: 8 local rank: 0 gpu id: 0 ring id: 0
+Traceback (most recent call last):
+  File "launch.py", line 44, in <module>
+    train()
+  File "launch.py", line 20, in train
+    dist.init_parallel_env()
+  File "/usr/local/python3.5.1/lib/python3.5/site-packages/paddle/distributed/parallel.py", line 182, in init_parallel_env
+    parallel_helper._init_parallel_ctx()
+  File "/usr/local/python3.5.1/lib/python3.5/site-packages/paddle/fluid/dygraph/parallel_helper.py", line 42, in _init_parallel_ctx
+    __parallel_ctx__clz__.init()
+OSError: (External)  Nccl error, unhandled cuda error  (at /work/paddle/paddle/fluid/platform/collective_helper.cc:80)
+  [Hint: If you need C++ stacktraces for debugging, please set `FLAGS_call_stack_level=2`.]
+
+
+
+--------------------------------------
+C++ Traceback (most recent call last):
+--------------------------------------
+0   paddle::framework::SignalHandle(char const*, int)
+1   paddle::platform::GetCurrentTraceBackString[abi:cxx11]()
+
+----------------------
+Error Message Summary:
+----------------------
+FatalError: `Termination signal` is detected by the operating system.
+  [TimeInfo: *** Aborted at 1609149482 (unix time) try "date -d @1609149482" if you are using GNU date ***]
+  [SignalInfo: *** SIGTERM (@0x4b9d) received by PID 19487 (TID 0x7efdd1de1700) from PID 19357 ***]
+
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+W1228 09:58:29.180452 19618 nccl_context.cc:142] Socket connect worker 127.0.0.1:38225 failed, try again after 3 seconds.
+I1228 09:58:32.202071 19618 nccl_context.cc:189] init nccl context nranks: 4 local rank: 0 gpu id: 0 ring id: 0
+W1228 09:58:33.367029 19618 device_context.cc:342] Please NOTE: device: 0, GPU Compute Capability: 6.1, Driver API Version: 10.1, Runtime API Version: 10.1
+W1228 09:58:33.386160 19618 device_context.cc:352] device: 0, cuDNN Version: 7.6.
+W0309 07:12:37.406895   380 gen_comm_id_helper.cc:118] connect addr=127.0.0.1:31644 failed 1 times with reason: Connection refused retry after 0.5 seconds
+I0309 07:12:37.907269   380 nccl_context.cc:66] init nccl context nranks: 2 local rank: 0 gpu id: 2 ring id: 0
+W0309 07:12:38.678947   380 device_context.cc:368] Please NOTE: device: 2, GPU Compute Capability: 6.1, Driver API Version: 10.2, Runtime API Version: 10.1
+W0309 07:12:38.688143   380 device_context.cc:386] device: 2, cuDNN Version: 7.6.
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 0 batch 0: loss = 2.6752495765686035
+Epoch 0 batch 1: loss = 2.38533616065979
+Epoch 0 batch 2: loss = 2.4009578227996826
+Epoch 0 batch 3: loss = 2.6886067390441895
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 1 batch 0: loss = 2.763385534286499
+Epoch 1 batch 1: loss = 2.269808530807495
+Epoch 1 batch 2: loss = 2.4195480346679688
+Epoch 1 batch 3: loss = 2.4960873126983643
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 2 batch 0: loss = 2.2523508071899414
+Epoch 2 batch 1: loss = 2.3256683349609375
+Epoch 2 batch 2: loss = 2.299255132675171
+Epoch 2 batch 3: loss = 2.287363052368164
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 3 batch 0: loss = 2.458186626434326
+Epoch 3 batch 1: loss = 2.1986703872680664
+Epoch 3 batch 2: loss = 2.2002921104431152
+Epoch 3 batch 3: loss = 2.186218500137329
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 4 batch 0: loss = 2.2931337356567383
+Epoch 4 batch 1: loss = 2.299767017364502
+Epoch 4 batch 2: loss = 2.5132603645324707
+Epoch 4 batch 3: loss = 2.3255465030670166
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 5 batch 0: loss = 2.314704656600952
+Epoch 5 batch 1: loss = 2.4106531143188477
+Epoch 5 batch 2: loss = 2.38977313041687
+Epoch 5 batch 3: loss = 2.369584560394287
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 6 batch 0: loss = 2.290377616882324
+Epoch 6 batch 1: loss = 2.343632698059082
+Epoch 6 batch 2: loss = 2.2640323638916016
+Epoch 6 batch 3: loss = 2.3338544368743896
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 7 batch 0: loss = 2.4053750038146973
+Epoch 7 batch 1: loss = 2.3723912239074707
+Epoch 7 batch 2: loss = 2.310513973236084
+Epoch 7 batch 3: loss = 2.452228546142578
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 8 batch 0: loss = 2.2332985401153564
+Epoch 8 batch 1: loss = 2.226966381072998
+Epoch 8 batch 2: loss = 2.086460590362549
+Epoch 8 batch 3: loss = 2.4092960357666016
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 9 batch 0: loss = 2.3170180320739746
+Epoch 9 batch 1: loss = 2.236661672592163
+Epoch 9 batch 2: loss = 2.390341281890869
+Epoch 9 batch 3: loss = 2.336683750152588
+W0309 07:13:05.377266   644 gen_comm_id_helper.cc:118] connect addr=127.0.0.1:40757 failed 1 times with reason: Connection refused retry after 0.5 seconds
+I0309 07:13:05.877686   644 nccl_context.cc:66] init nccl context nranks: 2 local rank: 0 gpu id: 0 ring id: 0
+W0309 07:13:06.921025   644 device_context.cc:368] Please NOTE: device: 0, GPU Compute Capability: 6.1, Driver API Version: 10.2, Runtime API Version: 10.1
+W0309 07:13:06.931041   644 device_context.cc:386] device: 0, cuDNN Version: 7.6.
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 0 batch 0: loss = 2.8166604042053223
+Epoch 0 batch 1: loss = 2.6589930057525635
+Epoch 0 batch 2: loss = 2.268794298171997
+Epoch 0 batch 3: loss = 2.463461399078369
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 1 batch 0: loss = 2.7452125549316406
+Epoch 1 batch 1: loss = 2.3032398223876953
+Epoch 1 batch 2: loss = 2.4623866081237793
+Epoch 1 batch 3: loss = 2.241428852081299
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 2 batch 0: loss = 2.330443859100342
+Epoch 2 batch 1: loss = 2.341977596282959
+Epoch 2 batch 2: loss = 2.3696413040161133
+Epoch 2 batch 3: loss = 2.204340934753418
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 3 batch 0: loss = 2.2581324577331543
+Epoch 3 batch 1: loss = 2.328378677368164
+Epoch 3 batch 2: loss = 2.392666816711426
+Epoch 3 batch 3: loss = 2.2040891647338867
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 4 batch 0: loss = 2.340899705886841
+Epoch 4 batch 1: loss = 2.583566427230835
+Epoch 4 batch 2: loss = 2.3943653106689453
+Epoch 4 batch 3: loss = 2.4736263751983643
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 5 batch 0: loss = 2.2936835289001465
+Epoch 5 batch 1: loss = 2.212367057800293
+Epoch 5 batch 2: loss = 2.268204689025879
+Epoch 5 batch 3: loss = 2.4821226596832275
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 6 batch 0: loss = 2.2656116485595703
+Epoch 6 batch 1: loss = 2.3332269191741943
+Epoch 6 batch 2: loss = 2.603905200958252
+Epoch 6 batch 3: loss = 2.431414842605591
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 7 batch 0: loss = 2.1794443130493164
+Epoch 7 batch 1: loss = 2.1110968589782715
+Epoch 7 batch 2: loss = 2.480118989944458
+Epoch 7 batch 3: loss = 2.42173171043396
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 8 batch 0: loss = 2.1124532222747803
+Epoch 8 batch 1: loss = 2.1526315212249756
+Epoch 8 batch 2: loss = 2.6810779571533203
+Epoch 8 batch 3: loss = 2.238828420639038
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 9 batch 0: loss = 2.264216899871826
+Epoch 9 batch 1: loss = 2.1394827365875244
+Epoch 9 batch 2: loss = 2.2523233890533447
+Epoch 9 batch 3: loss = 2.4091100692749023
+W0309 07:13:37.142251   916 gen_comm_id_helper.cc:118] connect addr=127.0.0.1:48807 failed 1 times with reason: Connection refused retry after 0.5 seconds
+I0309 07:13:37.642820   916 nccl_context.cc:66] init nccl context nranks: 4 local rank: 0 gpu id: 0 ring id: 0
+W0309 07:13:39.032819   916 device_context.cc:368] Please NOTE: device: 0, GPU Compute Capability: 6.1, Driver API Version: 10.2, Runtime API Version: 10.1
+W0309 07:13:39.042295   916 device_context.cc:386] device: 0, cuDNN Version: 7.6.
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 0 batch 0: loss = 2.6384940147399902
+Epoch 0 batch 1: loss = 2.3393139839172363
+Epoch 0 batch 2: loss = 2.4041481018066406
+Epoch 0 batch 3: loss = 2.229419469833374
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 1 batch 0: loss = 2.3630177974700928
+Epoch 1 batch 1: loss = 1.8997446298599243
+Epoch 1 batch 2: loss = 2.1286368370056152
+Epoch 1 batch 3: loss = 2.7339112758636475
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 2 batch 0: loss = 2.449420928955078
+Epoch 2 batch 1: loss = 2.4072985649108887
+Epoch 2 batch 2: loss = 2.358607053756714
+Epoch 2 batch 3: loss = 2.5865135192871094
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 3 batch 0: loss = 2.3706960678100586
+Epoch 3 batch 1: loss = 2.5234591960906982
+Epoch 3 batch 2: loss = 2.5983588695526123
+Epoch 3 batch 3: loss = 2.6880648136138916
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 4 batch 0: loss = 2.6222758293151855
+Epoch 4 batch 1: loss = 2.18705677986145
+Epoch 4 batch 2: loss = 2.4258718490600586
+Epoch 4 batch 3: loss = 2.272942304611206
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 5 batch 0: loss = 2.511873960494995
+Epoch 5 batch 1: loss = 2.4896771907806396
+Epoch 5 batch 2: loss = 2.2133255004882812
+Epoch 5 batch 3: loss = 2.3308143615722656
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 6 batch 0: loss = 2.2872233390808105
+Epoch 6 batch 1: loss = 2.433201313018799
+Epoch 6 batch 2: loss = 2.5504627227783203
+Epoch 6 batch 3: loss = 2.3138060569763184
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 7 batch 0: loss = 2.4965364933013916
+Epoch 7 batch 1: loss = 2.252269744873047
+Epoch 7 batch 2: loss = 2.429527521133423
+Epoch 7 batch 3: loss = 2.4889211654663086
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 8 batch 0: loss = 2.3277111053466797
+Epoch 8 batch 1: loss = 2.5587174892425537
+Epoch 8 batch 2: loss = 2.4110605716705322
+Epoch 8 batch 3: loss = 2.3834633827209473
+/work/dev3/paddle/build_venv/lib/python3.7/site-packages/paddle/fluid/dataloader/dataloader_iter.py:89: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+  if isinstance(slot[0], (np.ndarray, np.bool, numbers.Number)):
+Epoch 9 batch 0: loss = 2.2963967323303223
+Epoch 9 batch 1: loss = 2.3066420555114746
+Epoch 9 batch 2: loss = 2.4879627227783203
+Epoch 9 batch 3: loss = 2.3825581073760986

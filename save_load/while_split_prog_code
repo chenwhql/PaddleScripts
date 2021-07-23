@@ -1,0 +1,69 @@
+{ // block 0
+    persist var fc_0.w_0@LOADED : fluid.VarType.LOD_TENSOR.shape[784, 10].astype(VarType.FP32)
+    var fill_constant_1.tmp_0 : fluid.VarType.LOD_TENSOR.shape[1].astype(VarType.INT64)
+    var fc_0.tmp_2 : fluid.VarType.LOD_TENSOR.shape[-1, 10].astype(VarType.FP32)
+    persist var fc_1.w_0@LOADED : fluid.VarType.LOD_TENSOR.shape[10, 10].astype(VarType.FP32)
+    var fill_constant_0.tmp_0 : fluid.VarType.LOD_TENSOR.shape[1].astype(VarType.INT64)
+    persist var fc_1.b_0@LOADED : fluid.VarType.LOD_TENSOR.shape[10].astype(VarType.FP32)
+    var fc_0.tmp_1 : fluid.VarType.LOD_TENSOR.shape[-1, 10].astype(VarType.FP32)
+    var _generated_var_0 : fluid.VarType.STEP_SCOPES)
+    var img : fluid.VarType.LOD_TENSOR.shape[-1, 784].astype(VarType.FP32)
+    var fc_0.tmp_0 : fluid.VarType.LOD_TENSOR.shape[-1, 10].astype(VarType.FP32)
+    var tmp_0 : fluid.VarType.LOD_TENSOR.shape[1].astype(VarType.BOOL)
+    persist var fc_0.b_0@LOADED : fluid.VarType.LOD_TENSOR.shape[10].astype(VarType.FP32)
+
+    {Out=['fill_constant_0.tmp_0']} = fill_constant(inputs={ShapeTensor=[], ShapeTensorList=[]}, dtype = 3, force_cpu = False, op_device = , op_namescope = /, op_role = 0, op_role_var = [], shape = [1], str_value = 0, value = 0.0)
+    {Out=['fill_constant_1.tmp_0']} = fill_constant(inputs={ShapeTensor=[], ShapeTensorList=[]}, dtype = 3, force_cpu = False, op_device = , op_namescope = /, op_role = 0, op_role_var = [], shape = [1], str_value = 5, value = 5.0)
+    {Out=['fc_0.tmp_0']} = mul(inputs={X=['img'], Y=['fc_0.w_0@LOADED']}, force_fp32_output = False, op_device = , op_namescope = /, op_role = 0, op_role_var = [], scale_out = 1.0, scale_x = 1.0, scale_y = [1.0], use_mkldnn = False, x_num_col_dims = 1, y_num_col_dims = 1)
+    {Out=['fc_0.tmp_1']} = elementwise_add(inputs={X=['fc_0.tmp_0'], Y=['fc_0.b_0@LOADED']}, axis = 1, op_device = , op_namescope = /, op_role = 0, op_role_var = [], use_mkldnn = False, x_data_format = , y_data_format = )
+    {Out=['fc_0.tmp_2']} = softmax(inputs={X=['fc_0.tmp_1']}, axis = -1, data_format = AnyLayout, is_test = False, op_device = , op_namescope = /, op_role = 0, op_role_var = [], use_cudnn = False, use_mkldnn = False)
+    {Out=['tmp_0']} = less_than(inputs={X=['fill_constant_0.tmp_0'], Y=['fill_constant_1.tmp_0']}, axis = -1, force_cpu = True, op_device = , op_namescope = /, op_role = 0, op_role_var = [])
+    {Out=['fill_constant_1.tmp_0', 'tmp_0', 'fill_constant_0.tmp_0', 'fc_0.tmp_2'], StepScopes=['_generated_var_0']} = while(inputs={Condition=['tmp_0'], X=['fc_1.b_0@LOADED', 'fill_constant_1.tmp_0', 'fc_1.w_0@LOADED', 'fill_constant_0.tmp_0', 'fc_0.tmp_2']}, is_test = False, op_device = , op_namescope = /, op_role = 0, op_role_var = [], skip_eager_deletion_vars = [], sub_block = block[1])
+}
+{ // block 1
+    var fc_1.tmp_1 : fluid.VarType.LOD_TENSOR.shape[-1, 10].astype(VarType.FP32)
+    var tmp_2 : fluid.VarType.LOD_TENSOR.shape[1].astype(VarType.BOOL)
+    var fc_1.tmp_0 : fluid.VarType.LOD_TENSOR.shape[-1, 10].astype(VarType.FP32)
+    var tmp_1 : fluid.VarType.LOD_TENSOR.shape[1].astype(VarType.INT64)
+    var fc_1.tmp_2 : fluid.VarType.LOD_TENSOR.shape[-1, 10].astype(VarType.FP32)
+
+    {Out=['fc_1.tmp_0']} = mul(inputs={X=['fc_0.tmp_2'], Y=['fc_1.w_0@LOADED']}, force_fp32_output = False, op_device = , op_namescope = /, op_role = 0, op_role_var = [], scale_out = 1.0, scale_x = 1.0, scale_y = [1.0], use_mkldnn = False, x_num_col_dims = 1, y_num_col_dims = 1)
+    {Out=['fc_1.tmp_1']} = elementwise_add(inputs={X=['fc_1.tmp_0'], Y=['fc_1.b_0@LOADED']}, axis = 1, op_device = , op_namescope = /, op_role = 0, op_role_var = [], use_mkldnn = False, x_data_format = , y_data_format = )
+    {Out=['fc_1.tmp_2']} = softmax(inputs={X=['fc_1.tmp_1']}, axis = -1, data_format = AnyLayout, is_test = False, op_device = , op_namescope = /, op_role = 0, op_role_var = [], use_cudnn = False, use_mkldnn = False)
+    {Out=['tmp_1']} = scale(inputs={ScaleTensor=[], X=['fill_constant_0.tmp_0']}, bias = 1.0, bias_after_scale = True, op_device = , op_namescope = /, op_role = 0, op_role_var = [], scale = 1.0)
+    {Out=['tmp_2']} = less_than(inputs={X=['tmp_1'], Y=['fill_constant_1.tmp_0']}, axis = -1, force_cpu = True, op_device = , op_namescope = /, op_role = 0, op_role_var = [])
+    {Out=['fill_constant_0.tmp_0']} = assign(inputs={X=['tmp_1']}, op_device = , op_namescope = /, op_role = 0, op_role_var = [])
+    {Out=['fill_constant_1.tmp_0']} = assign(inputs={X=['fill_constant_1.tmp_0']}, op_device = , op_namescope = /, op_role = 0, op_role_var = [])
+    {Out=['fc_0.tmp_2']} = assign(inputs={X=['fc_1.tmp_2']}, op_device = , op_namescope = /, op_role = 0, op_role_var = [])
+    {Out=['tmp_0']} = assign(inputs={X=['tmp_2']}, op_device = , op_namescope = /, op_role = 0, op_role_var = [])
+}
+
+
+{ // block 0
+    var fc_0.tmp_0@GRAD : fluid.VarType.LOD_TENSOR.shape[-1, 10].astype(VarType.FP32)
+    var fc_1.b_0@LOADED@GRAD : fluid.VarType.LOD_TENSOR.shape[].astype(VarType.BOOL)
+    var fc_0.tmp_2@GRAD : fluid.VarType.LOD_TENSOR.shape[-1, 10].astype(VarType.FP32)
+    var img@GRAD : fluid.VarType.LOD_TENSOR.shape[-1, 784].astype(VarType.FP32)
+    var fc_1.w_0@LOADED@GRAD : fluid.VarType.LOD_TENSOR.shape[].astype(VarType.BOOL)
+    var fc_0.tmp_1@GRAD : fluid.VarType.LOD_TENSOR.shape[-1, 10].astype(VarType.FP32)
+    var fc_0.b_0@LOADED@GRAD : fluid.VarType.LOD_TENSOR.shape[].astype(VarType.BOOL)
+    var fc_0.w_0@LOADED@GRAD : fluid.VarType.LOD_TENSOR.shape[].astype(VarType.BOOL)
+
+    {X@GRAD=['fc_1.b_0@LOADED@GRAD', '@EMPTY@', 'fc_1.w_0@LOADED@GRAD', '@EMPTY@', 'fc_0.tmp_2@GRAD']} = while_grad(inputs={Out=['fill_constant_1.tmp_0', 'tmp_0', 'fill_constant_0.tmp_0', 'fc_0.tmp_2'], Out@GRAD=['fc_0.tmp_2@GRAD'], StepScopes=['_generated_var_0'], X=['fc_1.b_0@LOADED', 'fill_constant_1.tmp_0', 'fc_1.w_0@LOADED', 'fill_constant_0.tmp_0', 'fc_0.tmp_2']}, is_test = False, op_device = , op_namescope = /, op_role = 1, op_role_var = [], original_output_grad = ['fc_0.tmp_2@GRAD'], skip_eager_deletion_vars = [], sub_block = block[2])
+    {X@GRAD=['fc_0.tmp_1@GRAD']} = softmax_grad(inputs={Out=['fc_0.tmp_2'], Out@GRAD=['fc_0.tmp_2@GRAD']}, axis = -1, data_format = AnyLayout, is_test = False, op_device = , op_namescope = /, op_role = 1, op_role_var = [], use_cudnn = False, use_mkldnn = False)
+    {X@GRAD=['fc_0.tmp_0@GRAD'], Y@GRAD=['fc_0.b_0@LOADED@GRAD']} = elementwise_add_grad(inputs={Out@GRAD=['fc_0.tmp_1@GRAD'], X=['fc_0.tmp_0'], Y=['fc_0.b_0@LOADED']}, axis = 1, op_device = , op_namescope = /, op_role = 1, op_role_var = [], use_mkldnn = False, x_data_format = , y_data_format = )
+    {X@GRAD=['img@GRAD'], Y@GRAD=['fc_0.w_0@LOADED@GRAD']} = mul_grad(inputs={Out@GRAD=['fc_0.tmp_0@GRAD'], X=['img'], Y=['fc_0.w_0@LOADED']}, force_fp32_output = False, op_device = , op_namescope = /, op_role = 1, op_role_var = [], scale_out = 1.0, scale_x = 1.0, scale_y = [1.0], use_mkldnn = False, x_num_col_dims = 1, y_num_col_dims = 1)
+}
+{ // block 1
+    var fc_1.w_0@LOADED@GRAD : fluid.VarType.LOD_TENSOR.shape[].astype(VarType.BOOL)
+    var fc_1.tmp_2@GRAD : fluid.VarType.LOD_TENSOR.shape[-1, 10].astype(VarType.FP32)
+    var fc_0.tmp_2@GRAD : fluid.VarType.LOD_TENSOR.shape[-1, 10].astype(VarType.FP32)
+    var fc_1.b_0@LOADED@GRAD : fluid.VarType.LOD_TENSOR.shape[].astype(VarType.BOOL)
+    var fc_1.tmp_0@GRAD : fluid.VarType.LOD_TENSOR.shape[-1, 10].astype(VarType.FP32)
+    var fc_1.tmp_1@GRAD : fluid.VarType.LOD_TENSOR.shape[-1, 10].astype(VarType.FP32)
+
+    {Out=['fc_1.tmp_2@GRAD']} = assign(inputs={X=['fc_0.tmp_2@GRAD']}, op_device = , op_role = 1)
+    {X@GRAD=['fc_1.tmp_1@GRAD']} = softmax_grad(inputs={Out=['fc_1.tmp_2'], Out@GRAD=['fc_1.tmp_2@GRAD']}, axis = -1, data_format = AnyLayout, is_test = False, op_device = , op_namescope = /, op_role = 1, op_role_var = [], use_cudnn = False, use_mkldnn = False)
+    {X@GRAD=['fc_1.tmp_0@GRAD'], Y@GRAD=['fc_1.b_0@LOADED@GRAD']} = elementwise_add_grad(inputs={Out@GRAD=['fc_1.tmp_1@GRAD'], X=['fc_1.tmp_0'], Y=['fc_1.b_0@LOADED']}, axis = 1, op_device = , op_namescope = /, op_role = 1, op_role_var = [], use_mkldnn = False, x_data_format = , y_data_format = )
+    {X@GRAD=['fc_0.tmp_2@GRAD'], Y@GRAD=['fc_1.w_0@LOADED@GRAD']} = mul_grad(inputs={Out@GRAD=['fc_1.tmp_0@GRAD'], X=['fc_0.tmp_2'], Y=['fc_1.w_0@LOADED']}, force_fp32_output = False, op_device = , op_namescope = /, op_role = 1, op_role_var = [], scale_out = 1.0, scale_x = 1.0, scale_y = [1.0], use_mkldnn = False, x_num_col_dims = 1, y_num_col_dims = 1)
+}

@@ -1,0 +1,75 @@
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+I1228 09:49:21.427196 18750 nccl_context.cc:189] init nccl context nranks: 8 local rank: 4 gpu id: 4 ring id: 0
+W1228 09:49:23.984993 18750 device_context.cc:342] Please NOTE: device: 4, GPU Compute Capability: 6.1, Driver API Version: 10.1, Runtime API Version: 10.1
+W1228 09:49:23.992200 18750 device_context.cc:352] device: 4, cuDNN Version: 7.6.
+
+
+--------------------------------------
+C++ Traceback (most recent call last):
+--------------------------------------
+0   paddle::imperative::NCCLParallelContext::Init()
+1   paddle::platform::NCCLCommContext::CreateNCCLComm(ncclUniqueId*, int, int, int, int)
+2   paddle::platform::NCCLCommContext::AssignNCCLComm(ncclComm*, int, int, int, int)
+3   paddle::platform::CUDADeviceContext::CUDADeviceContext(paddle::platform::CUDAPlace)
+4   paddle::platform::CUDAContext::CUDAContext(paddle::platform::CUDAPlace const&, paddle::platform::stream::Priority const&)
+5   paddle::platform::stream::CUDAStream::Init(paddle::platform::Place const&, paddle::platform::stream::Priority const&)
+6   paddle::framework::SignalHandle(char const*, int)
+7   paddle::platform::GetCurrentTraceBackString[abi:cxx11]()
+
+----------------------
+Error Message Summary:
+----------------------
+FatalError: `Termination signal` is detected by the operating system.
+  [TimeInfo: *** Aborted at 1609148965 (unix time) try "date -d @1609148965" if you are using GNU date ***]
+  [SignalInfo: *** SIGTERM (@0x4903) received by PID 18750 (TID 0x7ff6d50f2700) from PID 18691 ***]
+
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+I1228 09:52:24.248164 18960 nccl_context.cc:189] init nccl context nranks: 8 local rank: 4 gpu id: 4 ring id: 0
+W1228 09:52:25.475638 18960 device_context.cc:342] Please NOTE: device: 4, GPU Compute Capability: 6.1, Driver API Version: 10.1, Runtime API Version: 10.1
+W1228 09:52:25.482934 18960 device_context.cc:352] device: 4, cuDNN Version: 7.6.
+
+
+--------------------------------------
+C++ Traceback (most recent call last):
+--------------------------------------
+0   paddle::imperative::NCCLParallelContext::Init()
+1   paddle::platform::NCCLCommContext::CreateNCCLComm(ncclUniqueId*, int, int, int, int)
+2   paddle::platform::NCCLCommContext::AssignNCCLComm(ncclComm*, int, int, int, int)
+3   paddle::platform::CUDADeviceContext::CUDADeviceContext(paddle::platform::CUDAPlace)
+4   paddle::platform::CUDAContext::CUDAContext(paddle::platform::CUDAPlace const&, paddle::platform::stream::Priority const&)
+5   paddle::platform::stream::CUDAStream::Init(paddle::platform::Place const&, paddle::platform::stream::Priority const&)
+6   paddle::framework::SignalHandle(char const*, int)
+7   paddle::platform::GetCurrentTraceBackString[abi:cxx11]()
+
+----------------------
+Error Message Summary:
+----------------------
+FatalError: `Termination signal` is detected by the operating system.
+  [TimeInfo: *** Aborted at 1609149145 (unix time) try "date -d @1609149145" if you are using GNU date ***]
+  [SignalInfo: *** SIGTERM (@0x49d5) received by PID 18960 (TID 0x7f9698cac700) from PID 18901 ***]
+
+grep: warning: GREP_OPTIONS is deprecated; please use an alias or script
+I1228 09:58:00.282230 19377 nccl_context.cc:189] init nccl context nranks: 8 local rank: 4 gpu id: 4 ring id: 0
+W1228 09:58:02.442076 19377 device_context.cc:342] Please NOTE: device: 4, GPU Compute Capability: 6.1, Driver API Version: 10.1, Runtime API Version: 10.1
+W1228 09:58:02.467780 19377 device_context.cc:352] device: 4, cuDNN Version: 7.6.
+
+
+--------------------------------------
+C++ Traceback (most recent call last):
+--------------------------------------
+0   paddle::imperative::NCCLParallelContext::Init()
+1   paddle::platform::NCCLCommContext::CreateNCCLComm(ncclUniqueId*, int, int, int, int)
+2   paddle::platform::NCCLCommContext::AssignNCCLComm(ncclComm*, int, int, int, int)
+3   paddle::platform::CUDADeviceContext::CUDADeviceContext(paddle::platform::CUDAPlace)
+4   paddle::platform::CUDAContext::CUDAContext(paddle::platform::CUDAPlace const&, paddle::platform::stream::Priority const&)
+5   paddle::platform::stream::CUDAStream::Init(paddle::platform::Place const&, paddle::platform::stream::Priority const&)
+6   paddle::framework::SignalHandle(char const*, int)
+7   paddle::platform::GetCurrentTraceBackString[abi:cxx11]()
+
+----------------------
+Error Message Summary:
+----------------------
+FatalError: `Termination signal` is detected by the operating system.
+  [TimeInfo: *** Aborted at 1609149484 (unix time) try "date -d @1609149484" if you are using GNU date ***]
+  [SignalInfo: *** SIGTERM (@0x4b5b) received by PID 19377 (TID 0x7eff3418b700) from PID 19291 ***]
+

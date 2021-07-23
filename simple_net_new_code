@@ -1,0 +1,46 @@
+startup program:
+{ // block 0
+    persist trainable parameter fc_0.b_0 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.FP32)
+    persist trainable parameter fc_0.w_0 : fluid.VarType.LOD_TENSOR.shape(13, 1).astype(VarType.FP32)
+    persist var learning_rate_0 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.FP32)
+
+    {Out=['learning_rate_0']} = fill_constant(inputs={}, dtype = 5, force_cpu = False, op_device = , op_namescope = /, op_role = 0, op_role_var = [], shape = [1], str_value = , value = 0.009999999776482582)
+    {Out=['fc_0.b_0']} = fill_constant(inputs={}, dtype = 5, force_cpu = False, op_device = , op_namescope = /, op_role = 0, op_role_var = [], shape = [1], str_value = , value = 0.0)
+    {Out=['fc_0.w_0']} = uniform_random(inputs={ShapeTensor=[], ShapeTensorList=[]}, diag_num = 0, diag_step = 0, diag_val = 1.0, dtype = 5, max = 0.6546536684036255, min = -0.6546536684036255, op_device = , op_namescope = /, op_role = 0, op_role_var = [], seed = 0, shape = [13, 1])
+}
+main program:
+{ // block 0
+    var X : fluid.VarType.LOD_TENSOR.shape(-1, 13).astype(VarType.FP32)
+    var Y : fluid.VarType.LOD_TENSOR.shape(-1, 1).astype(VarType.FP32)
+    persist trainable parameter fc_0.b_0 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.FP32)
+    var fc_0.b_0@GRAD : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.FP32)
+    var fc_0.tmp_0 : fluid.VarType.LOD_TENSOR.shape(-1, 1).astype(VarType.FP32)
+    var fc_0.tmp_0@GRAD : fluid.VarType.LOD_TENSOR.shape(-1, 1).astype(VarType.FP32)
+    var fc_0.tmp_1 : fluid.VarType.LOD_TENSOR.shape(-1, 1).astype(VarType.FP32)
+    var fc_0.tmp_1@GRAD : fluid.VarType.LOD_TENSOR.shape(-1, 1).astype(VarType.FP32)
+    persist trainable parameter fc_0.w_0 : fluid.VarType.LOD_TENSOR.shape(13, 1).astype(VarType.FP32)
+    var fc_0.w_0@GRAD : fluid.VarType.LOD_TENSOR.shape(13, 1).astype(VarType.FP32)
+    persist var learning_rate_0 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.FP32)
+    var mean_0.tmp_0 : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.FP32)
+    var mean_0.tmp_0@GRAD : fluid.VarType.LOD_TENSOR.shape(1,).astype(VarType.FP32)
+    var square_error_cost_0.tmp_0 : fluid.VarType.LOD_TENSOR.shape(-1, 1).astype(VarType.FP32)
+    var square_error_cost_0.tmp_0@GRAD : fluid.VarType.LOD_TENSOR.shape(-1, 1).astype(VarType.FP32)
+    var square_error_cost_0.tmp_1 : fluid.VarType.LOD_TENSOR.shape(-1, 1).astype(VarType.FP32)
+    var square_error_cost_0.tmp_1@GRAD : fluid.VarType.LOD_TENSOR.shape(-1, 1).astype(VarType.FP32)
+
+    {Out=['fc_0.tmp_0']} = mul(inputs={X=['X'], Y=['fc_0.w_0']}, force_fp32_output = False, op_device = , op_namescope = /, op_role = 0, op_role_var = [], scale_out = 1.0, scale_x = 1.0, scale_y = [1.0], use_mkldnn = False, x_num_col_dims = 1, y_num_col_dims = 1)
+    {Out=['fc_0.tmp_1']} = elementwise_add(inputs={X=['fc_0.tmp_0'], Y=['fc_0.b_0']}, axis = 1, op_device = , op_namescope = /, op_role = 0, op_role_var = [], use_mkldnn = False, x_data_format = , y_data_format = )
+    {Out=['square_error_cost_0.tmp_0']} = elementwise_sub(inputs={X=['fc_0.tmp_1'], Y=['Y']}, axis = -1, op_device = , op_namescope = /, op_role = 0, op_role_var = [], use_mkldnn = False, x_data_format = , y_data_format = )
+    {Out=['square_error_cost_0.tmp_1']} = square(inputs={X=['square_error_cost_0.tmp_0']}, op_device = , op_namescope = /, op_role = 0, op_role_var = [], use_cudnn = False, use_mkldnn = False)
+    {Out=['mean_0.tmp_0']} = mean(inputs={X=['square_error_cost_0.tmp_1']}, op_device = , op_namescope = /, op_role = 256, op_role_var = [])
+    {Out=['mean_0.tmp_0@GRAD']} = fill_constant(inputs={}, dtype = 5, force_cpu = False, op_device = , op_role = 257, shape = [1], value = 1.0)
+    {X@GRAD=['square_error_cost_0.tmp_1@GRAD']} = mean_grad(inputs={Out@GRAD=['mean_0.tmp_0@GRAD'], X=['square_error_cost_0.tmp_1']}, op_device = , op_role = 1)
+    {X@GRAD=['square_error_cost_0.tmp_0@GRAD']} = square_grad(inputs={Out@GRAD=['square_error_cost_0.tmp_1@GRAD'], X=['square_error_cost_0.tmp_0']}, op_device = , op_namescope = /, op_role = 1, op_role_var = [], use_cudnn = False, use_mkldnn = False)
+    {X@GRAD=['fc_0.tmp_1@GRAD'], Y@GRAD=[]} = elementwise_sub_grad(inputs={Out@GRAD=['square_error_cost_0.tmp_0@GRAD'], X=['fc_0.tmp_1'], Y=['Y']}, axis = -1, op_device = , op_namescope = /, op_role = 1, op_role_var = [], use_mkldnn = False, x_data_format = , y_data_format = )
+    {X@GRAD=['fc_0.tmp_0@GRAD'], Y@GRAD=['fc_0.b_0@GRAD']} = elementwise_add_grad(inputs={Out@GRAD=['fc_0.tmp_1@GRAD'], X=['fc_0.tmp_0'], Y=['fc_0.b_0']}, axis = 1, op_device = , op_namescope = /, op_role = 1, op_role_var = ['fc_0.b_0', 'fc_0.b_0@GRAD'], use_mkldnn = False, x_data_format = , y_data_format = )
+    {X@GRAD=[], Y@GRAD=['fc_0.w_0@GRAD']} = mul_grad(inputs={Out@GRAD=['fc_0.tmp_0@GRAD'], X=['X'], Y=['fc_0.w_0']}, force_fp32_output = False, op_device = , op_namescope = /, op_role = 1, op_role_var = ['fc_0.w_0', 'fc_0.w_0@GRAD'], scale_out = 1.0, scale_x = 1.0, scale_y = [1.0], use_mkldnn = False, x_num_col_dims = 1, y_num_col_dims = 1)
+    {ParamOut=['fc_0.b_0']} = sgd(inputs={Grad=['fc_0.b_0@GRAD'], LearningRate=['learning_rate_0'], Param=['fc_0.b_0']}, op_device = , op_namescope = /optimizer/, op_role = 2, op_role_var = ['fc_0.b_0', 'fc_0.b_0@GRAD'])
+    {ParamOut=['fc_0.w_0']} = sgd(inputs={Grad=['fc_0.w_0@GRAD'], LearningRate=['learning_rate_0'], Param=['fc_0.w_0']}, op_device = , op_namescope = /optimizer_1/, op_role = 2, op_role_var = ['fc_0.w_0', 'fc_0.w_0@GRAD'])
+}
+loss:
+0.24593507

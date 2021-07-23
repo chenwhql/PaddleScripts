@@ -1,6 +1,17 @@
-*
-/*
-!*/
+*.log
+*_log
+*.tar.gz
+*.tar
+*.zip
+*.tgz
+*.pd*
+__*__
+*.*_*
+_*
+*.cloudpickle
+
+build_venv/*
+Paddle-Inference-Demo/*
 
 !*.py
 !.gitignore

@@ -1,0 +1,560 @@
+/home/shenxing01/padbox_model/int8/shaopeng_joinupdate_int8/framework/dense_model_converter.py:35: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  self._content = yaml.load(yaml_fobj)
+mkdir: cannot create directory `/home/work/abacus': Permission denied
+ln: creating symbolic link `./monitor': File exists
+W0624 18:13:10.572225 139602 device_context.cc:320] Please NOTE: device: 0, GPU Compute Capability: 7.0, Driver API Version: 10.2, Runtime API Version: 10.2
+W0624 18:13:10.572407 139602 device_context.cc:330] device: 0, cuDNN Version: 7.0.
+W0624 18:13:11.977854 139602 device_context.h:200] WARNING: device: 0. The installed Paddle is compiled with CUDNN 7.4, but CUDNN version in your machine is 7.0, which may cause serious incompatible bug. Please recompile or reinstall Paddle with compatible CUDNN version.
+I0624 18:13:32.740586 139602 gzfilemgr.cpp:107] init uri:[afs://wudang.afs.baidu.com:9902],user:[cspd-model],passwd:[SaK2VqfEDeXzKPor], conf:[./conf/client.conf]
+I0624 18:13:32.740648 139602 thread_group.h:505] enable binding cpu, cpu num:96
+I0624 18:13:32.758766 139602 thread_group.h:614] numa node num:[2], cpu split num:[2], core num:[24]
+I0624 18:13:32.758806 139602 thread_group.h:703] cores_1: [48][0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47]
+I0624 18:13:32.758821 139602 thread_group.h:705] cores_2: [48][48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95]
+I0624 18:13:32.824362 139602 thread_group.h:495] reading ssd cores:24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95
+I0624 18:13:32.935770 139602 thread_group.h:516] reading nvidia cores:0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71
+I0624 18:13:32.935832 139602 thread_group.h:645] cpu type:2, group num: 2
+I0624 18:13:32.935837 139602 thread_group.h:647] group id:[0] cores:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23
+I0624 18:13:32.935847 139602 thread_group.h:647] group id:[1] cores:48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71
+I0624 18:13:32.935860 139602 thread_group.h:645] cpu type:2, group num: 2
+I0624 18:13:32.935863 139602 thread_group.h:647] group id:[0] cores:24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47
+I0624 18:13:32.935878 139602 thread_group.h:647] group id:[1] cores:72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95
+I0624 18:13:32.935894 139602 thread_group.h:788] ssd_io_cpu: [38][24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90]
+I0624 18:13:32.935900 139602 thread_group.h:790] ssd_swap_cpu: [38][24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90]
+I0624 18:13:32.935907 139602 thread_group.h:796] train_dnn_cpu: [8][0,1,2,3,4,5,6,7]
+I0624 18:13:32.935911 139602 thread_group.h:798] pack_thread_cpu: [8][48,49,50,51,52,53,54,55]
+I0624 18:13:32.935918 139602 thread_group.h:819] build_hbm_cores: [38][0,1,2,3,4,5,6,7,48,49,50,51,52,53,54,55,8,56,9,57,10,58,11,59,12,60,13,61,14,62,15,63,16,64,17,65,18,66]
+I0624 18:13:32.936162 139602 thread_group.h:840] read ins cpu: [42][8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,43,44,45,46,47,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,91,92,93,94,95]
+W0624 18:13:35.168118 139602 log_printer.h:144] 2021-06-24 18:13:35[0][139602]:show compress ratio:1 click compress ratio:8 embed compress ratio:60 delta_keep_pass:0 filter_low_score_base:0 mf compress ratio:60 mf_expand compress ratio:60 max_fea_num : 0 filter_mode : 1 bucket_num : 1000000
+W0624 18:13:35.168160 139602 log_printer.h:144] 2021-06-24 18:13:35[0][139602]:save text model disabled
+W0624 18:13:35.170727 139602 log_printer.h:144] 2021-06-24 18:13:35[0][139602]:ssd shard num:[37], db path:[/raid0/databasesx/]
+W0624 18:13:35.177906 139602 boxps.cpp:102] cvm options info: cuda_enabled: 1, all_slots_embedx: 0, _nonclk_coeff: 0.2, _clk_coeff: 1, _delete_threshold: 0.3, _delete_after_unseen_days: 45, _shrink_by_buffer_days: 0, _buffer_days: 0, _bound_per_pass: 1., packer name: showclk_packer, feature value size:40
+W0624 18:13:35.177944 139602 boxps.cpp:112] set threshold:5 min_bound:-3.40282e+38 max bound:3.40282e+38 learning_rate:0.05 initial_g2sum:3 initial_range:0 nonclk_coeff:0.2 clk_coeff:1
+W0624 18:13:35.177953 139602 boxps.cpp:120] embedx_create_thresholds info: min_bound:-2 max bound:2 learning_rate:0.05 initial_g2sum:3
+W0624 18:13:35.177958 139602 boxps.cpp:125] if_all_slots_embedx:0 initial_range:0.0001 w:6.25e-05 b:0 q_precise:32000
+W0624 18:13:35.177961 139602 boxps.cpp:130] if_all_slots_embedx:0
+I0624 18:13:35.181329 139602 thread_group.h:73] [139602]Thread Group:DEFAULT_GROUP_2 set_real_thread_num: 37
+[139602][140649509537600][baidu/base/ullib/src/comlog/comlog.cpp:174]Log is open....
+W0624 18:13:46.818907 139602 log_printer.h:144] 2021-06-24 18:13:46[0][139602]:SSD open time cost:11.637527 sec
+W0624 18:13:46.818953 139602 boxps.cpp:161] _gpu_device count: 8
+I0624 18:13:46.822438 139602 thread_group.h:73] [139602]Thread Group:read_ssd_thread_group set_real_thread_num: 37
+I0624 18:13:46.823081 139602 thread_group.h:73] [139602]Thread Group:sort_unique_thread_group set_real_thread_num: 37
+I0624 18:13:46.823678 139602 thread_group.h:73] [139602]Thread Group:DEFAULT_GROUP_5 set_real_thread_num: 37
+I0624 18:13:46.823817 139602 thread_group.h:73] [139602]Thread Group:DEFAULT_GROUP_7 set_real_thread_num: 8
+I0624 18:13:46.824322 139602 thread_group.h:73] [139602]Thread Group:dump_hbm_thread_group set_real_thread_num: 32
+I0624 18:13:46.824370 139602 thread_group.h:96] Thread Group:read_ssd_thread_group (thread:37,core:38) running on processor:24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90
+I0624 18:13:46.824410 139602 thread_group.h:96] Thread Group:sort_unique_thread_group (thread:37,core:42) running on processor:8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,43,44,45,46,47,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,91,92,93,94,95
+I0624 18:13:46.824424 139602 thread_group.h:96] Thread Group:hbm_device_thread_group (thread:8,core:8) running on processor:48,49,50,51,52,53,54,55
+I0624 18:13:46.824738 139602 thread_group.h:73] [139602]Thread Group:DEFAULT_GROUP_1 set_real_thread_num: 10
+I0624 18:13:46.824757 139602 thread_group.h:96] Thread Group:DEFAULT_GROUP_1 (thread:10,core:42) running on processor:8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,43,44,45,46,47,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,91,92,93,94,95
+I0624 18:13:46.828152 139602 box_wrapper.h:432] lr_map.size(): 54
+I0624 18:13:46.828171 139602 box_wrapper.h:434] ad_gate_param's lr is 7.5e-06
+I0624 18:13:46.828181 139602 box_wrapper.h:434] ad_gate_param_update's lr is 7.5e-06
+I0624 18:13:46.828186 139602 box_wrapper.h:434] ctr_gate_param's lr is 8.5e-06
+I0624 18:13:46.828191 139602 box_wrapper.h:434] ctr_gate_param_cross's lr is 8.5e-06
+I0624 18:13:46.828195 139602 box_wrapper.h:434] ctr_gate_param_cross_update's lr is 8.5e-06
+I0624 18:13:46.828200 139602 box_wrapper.h:434] ctr_gate_param_update's lr is 8.5e-06
+I0624 18:13:46.828205 139602 box_wrapper.h:434] h1_param's lr is 8e-06
+I0624 18:13:46.828210 139602 box_wrapper.h:434] h1_param_update's lr is 8e-06
+I0624 18:13:46.828214 139602 box_wrapper.h:434] h2_param's lr is 7.5e-06
+I0624 18:13:46.828218 139602 box_wrapper.h:434] h2_param_update's lr is 7.5e-06
+I0624 18:13:46.828223 139602 box_wrapper.h:434] h3_param's lr is 7e-06
+I0624 18:13:46.828227 139602 box_wrapper.h:434] h3_param_update's lr is 7e-06
+I0624 18:13:46.828231 139602 box_wrapper.h:434] h4_param's lr is 6.5e-06
+I0624 18:13:46.828235 139602 box_wrapper.h:434] h4_param_update's lr is 6.5e-06
+I0624 18:13:46.828239 139602 box_wrapper.h:434] h5_param's lr is 6e-06
+I0624 18:13:46.828243 139602 box_wrapper.h:434] h5_param_update's lr is 6e-06
+I0624 18:13:46.828248 139602 box_wrapper.h:434] h6_param's lr is 5.5e-06
+I0624 18:13:46.828251 139602 box_wrapper.h:434] h6_param_update's lr is 5.5e-06
+I0624 18:13:46.828255 139602 box_wrapper.h:434] mt_gate_param's lr is 7.5e-06
+I0624 18:13:46.828259 139602 box_wrapper.h:434] mt_gate_param_update's lr is 7.5e-06
+I0624 18:13:46.828263 139602 box_wrapper.h:434] ubm_gate_param's lr is 7e-06
+I0624 18:13:46.828269 139602 box_wrapper.h:434] ubm_gate_param_update's lr is 7e-06
+I0624 18:13:46.828274 139602 box_wrapper.h:434] ubm_h1_param's lr is 6.5e-06
+I0624 18:13:46.828279 139602 box_wrapper.h:434] ubm_h1_param_update's lr is 6.5e-06
+I0624 18:13:46.828282 139602 box_wrapper.h:434] ubm_h2_param's lr is 6e-06
+I0624 18:13:46.828287 139602 box_wrapper.h:434] ubm_h2_param_update's lr is 6e-06
+I0624 18:13:46.828292 139602 box_wrapper.h:434] ubm_h3_param's lr is 5.5e-06
+I0624 18:13:46.828297 139602 box_wrapper.h:434] ubm_h3_param_update's lr is 5.5e-06
+I0624 18:13:46.828301 139602 box_wrapper.h:434] ubm_mt_h1_param's lr is 7e-06
+I0624 18:13:46.828305 139602 box_wrapper.h:434] ubm_mt_h1_param_update's lr is 7e-06
+I0624 18:13:46.828310 139602 box_wrapper.h:434] ubm_mt_h2_param's lr is 6.5e-06
+I0624 18:13:46.828315 139602 box_wrapper.h:434] ubm_mt_h2_param_update's lr is 6.5e-06
+I0624 18:13:46.828318 139602 box_wrapper.h:434] ubm_mt_h3_param's lr is 6e-06
+I0624 18:13:46.828322 139602 box_wrapper.h:434] ubm_mt_h3_param_update's lr is 6e-06
+I0624 18:13:46.828326 139602 box_wrapper.h:434] ubm_mt_h4_param's lr is 7e-06
+I0624 18:13:46.828330 139602 box_wrapper.h:434] ubm_mt_h4_param_update's lr is 7e-06
+I0624 18:13:46.828334 139602 box_wrapper.h:434] ubm_mt_h5_param's lr is 6.5e-06
+I0624 18:13:46.828338 139602 box_wrapper.h:434] ubm_mt_h5_param_update's lr is 6.5e-06
+I0624 18:13:46.828343 139602 box_wrapper.h:434] ubm_mt_h6_param's lr is 6e-06
+I0624 18:13:46.828347 139602 box_wrapper.h:434] ubm_mt_h6_param_update's lr is 6e-06
+I0624 18:13:46.828351 139602 box_wrapper.h:434] ubm_psa_h1_param's lr is 6.5e-06
+I0624 18:13:46.828356 139602 box_wrapper.h:434] ubm_psa_h1_param_update's lr is 6.5e-06
+I0624 18:13:46.828359 139602 box_wrapper.h:434] ubm_psa_h2_param's lr is 6e-06
+I0624 18:13:46.828363 139602 box_wrapper.h:434] ubm_psa_h2_param_update's lr is 6e-06
+I0624 18:13:46.828367 139602 box_wrapper.h:434] ubm_psa_h3_param's lr is 5.5e-06
+I0624 18:13:46.828370 139602 box_wrapper.h:434] ubm_psa_h3_param_update's lr is 5.5e-06
+I0624 18:13:46.828374 139602 box_wrapper.h:434] ubm_rank_param's lr is 7e-06
+I0624 18:13:46.828384 139602 box_wrapper.h:434] ubm_rank_param_update's lr is 7e-06
+I0624 18:13:46.828389 139602 box_wrapper.h:434] wasq_nncross_kernel_param's lr is 8e-06
+I0624 18:13:46.828393 139602 box_wrapper.h:434] wasq_nncross_kernel_param_b's lr is 8e-06
+I0624 18:13:46.828398 139602 box_wrapper.h:434] wasq_nncross_kernel_param_b_update's lr is 8e-06
+I0624 18:13:46.828403 139602 box_wrapper.h:434] wasq_nncross_kernel_param_update's lr is 8e-06
+I0624 18:13:46.828408 139602 box_wrapper.h:434] wasq_nncross_param's lr is 8e-06
+I0624 18:13:46.828413 139602 box_wrapper.h:434] wasq_nncross_param_update's lr is 8e-06
+I0624 18:13:47.253882 139602 box_wrapper.h:990] Want to Get metric phase: -1
+I0624 18:13:53.113075 150093 data_set.cc:1683] merge thread id: 0, span time: 0.299625, max:0.299625, min:0.265705
+I0624 18:13:53.352136 149206 box_wrapper.h:1344] begin feedpass: 5.46609s, download + parse cost: 0.301337s, end feedpass:0.238989s
+WARNING 2021-06-24 18:13:53,355 [Thread-2] [read_ins_pipe.py:336] round 0 read finish
+WARNING 2021-06-24 18:13:53,355 [Thread-2] [read_ins_pipe.py:169] read thread exit
+W0624 18:13:53.360538 149163 log_printer.h:144] 2021-06-24 18:13:53[0][149163]:[PULL SPARSE] Task[0] finished, time cost:0.008258 sec, fea cnt:1939015, deduped fea cnt:571128, sort cost:0.000063 sec
+W0624 18:13:53.372006 149207 boxps.cpp:1236] build hbm, calc:0.001296, prepare:0.003376, copy:0.006704, key count:571128, embed cross count:0, embed cross ratio:0
+W0624 18:13:53.372041 149207 boxps.cpp:913] set hbm capacity 637768, total key:571128, max key:71749, device:8, load factor:0.9, shard key count:71749,71154,71499,71441,71722,71027,70845,71691,
+I0624 18:13:53.840827 149117 boxps.cpp:1111] thread#4 insert to device:4 from data index:4 total size:71722
+I0624 18:13:53.844189 149116 boxps.cpp:1111] thread#3 insert to device:3 from data index:3 total size:71441
+I0624 18:13:53.847568 149113 boxps.cpp:1111] thread#0 insert to device:0 from data index:0 total size:71749
+I0624 18:13:53.850073 149120 boxps.cpp:1111] thread#7 insert to device:7 from data index:7 total size:71691
+I0624 18:13:53.853478 149118 boxps.cpp:1111] thread#5 insert to device:5 from data index:5 total size:71027
+I0624 18:13:53.856622 149115 boxps.cpp:1111] thread#2 insert to device:2 from data index:2 total size:71499
+I0624 18:13:53.858996 149114 boxps.cpp:1111] thread#1 insert to device:1 from data index:1 total size:71154
+I0624 18:13:53.861459 149119 boxps.cpp:1111] thread#6 insert to device:6 from data index:6 total size:70845
+W0624 18:13:53.861521 149207 log_printer.h:144] 2021-06-24 18:13:53[0][149207]:build hbm total time cost:0.500697 sec [merge:0.000000,prepare:0.011423,build:0.072515,create:0.416737]
+W0624 18:13:54.376209 149207 data_set.cc:2110] thread_num 8, ins num 1520, batch num 8, thread avg batch num 1
+I0624 18:13:57.147491 150521 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.147567 150521 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.147572 150521 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.147575 150521 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.147648 150521 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.147816 150521 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.147840 150521 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.147843 150521 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.147846 150521 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.147873 150521 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.218726 150522 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.218784 150522 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.218791 150522 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.218794 150522 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.218819 150522 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.218987 150522 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.219012 150522 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.219015 150522 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.219018 150522 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.219063 150522 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.254158 150521 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.254204 150521 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.254209 150521 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.254211 150521 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.254245 150521 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.295959 150521 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.296000 150521 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.296005 150521 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.296007 150521 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.296046 150521 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.316438 150524 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.316493 150524 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.316499 150524 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.316502 150524 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.316545 150524 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.316679 150524 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.316699 150524 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.316701 150524 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.316704 150524 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.316731 150524 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.359841 150525 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.359889 150525 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.359894 150525 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.359896 150525 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.359946 150525 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.360076 150525 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.360097 150525 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.360101 150525 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.360105 150525 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.360127 150525 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.374647 150522 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.374689 150522 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.374694 150522 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.374697 150522 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.374727 150522 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.380638 150527 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.380686 150527 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.380690 150527 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.380693 150527 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.380750 150527 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.380895 150527 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.380918 150527 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.380931 150527 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.380935 150527 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.380972 150527 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.384872 150520 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.384945 150520 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.384953 150520 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.384955 150520 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.384997 150520 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.385143 150520 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.385162 150520 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.385165 150520 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.385169 150520 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.385195 150520 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.411808 150522 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.411847 150522 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.411851 150522 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.411854 150522 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.411870 150522 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.483727 150521 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.483772 150521 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.483776 150521 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.483779 150521 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.483815 150521 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.507719 150525 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.507762 150525 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.507767 150525 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.507771 150525 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.507803 150525 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.544150 150520 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.544193 150520 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.544198 150520 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.544200 150520 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.544234 150520 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.553030 150524 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.553073 150524 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.553078 150524 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.553081 150524 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.553117 150524 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.558903 150527 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.558964 150527 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.558969 150527 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.558972 150527 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.559005 150527 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.565068 150526 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.565122 150526 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.565129 150526 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.565131 150526 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.565508 150526 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.565658 150526 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.565680 150526 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.565683 150526 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.565692 150526 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.565732 150526 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.569231 150525 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.569270 150525 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.569275 150525 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.569278 150525 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.569303 150525 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.599601 150520 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.599643 150520 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.599647 150520 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.599650 150520 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.599673 150520 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.609247 150524 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.609289 150524 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.609293 150524 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.609297 150524 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.609344 150524 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.617267 150527 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.617308 150527 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.617313 150527 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.617316 150527 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.617341 150527 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.618818 150522 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.618860 150522 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.618865 150522 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.618867 150522 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.618891 150522 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.628470 150523 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.628520 150523 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.628525 150523 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.628526 150523 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.628566 150523 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.628698 150523 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.628724 150523 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.628727 150523 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.628731 150523 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.628963 150523 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.757335 150526 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.757557 150526 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.757563 150526 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.757565 150526 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.757597 150526 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.802721 150525 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.802762 150525 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.802767 150525 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.802769 150525 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.802798 150525 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.814322 150526 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.814555 150526 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.814560 150526 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.814568 150526 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.814586 150526 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.828016 150523 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.828058 150523 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.828063 150523 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.828066 150523 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.828096 150523 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.834270 150520 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.834312 150520 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.834316 150520 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.834319 150520 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.834352 150520 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.852180 150524 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.852221 150524 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.852226 150524 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.852229 150524 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.852262 150524 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.859601 150527 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.859643 150527 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.859648 150527 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.859652 150527 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.859683 150527 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:13:57.900393 150523 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:57.900431 150523 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:57.900436 150523 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:57.900439 150523 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:57.900460 150523 scaled_int8fc_op.cu:265] interval=0.016
+W0624 18:13:57.970660 150521 operator.cc:200] CUDAPlace(1) Op(scaled_int8fc_grad), inputs:{Bias[ubm_gate_param.b_0:float[1898]({})], Input[concat_17.tmp_0:float[357, 1898]({})], Out@GRAD[scaled_int8fc_4.tmp_0@GRAD:float[357, 1898]({})], W[ubm_gate_param.w_0:float[1898, 1898]({})]}, outputs:{Bias@GRAD[ubm_gate_param.b_0@GRAD:[1898]({})], Input@GRAD[concat_17.tmp_0@GRAD@RENAME@block0@1:[357, 1898]({})], W@GRAD[ubm_gate_param.w_0@GRAD:[1898, 1898]({})]}.
+I0624 18:13:58.051282 150526 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:58.051326 150526 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:58.051329 150526 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:58.051332 150526 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:58.051592 150526 scaled_int8fc_op.cu:265] interval=0.016
+W0624 18:13:58.115334 150522 operator.cc:200] CUDAPlace(2) Op(scaled_int8fc_grad), inputs:{Bias[ubm_gate_param.b_0:float[1898]({})], Input[concat_17.tmp_0:float[411, 1898]({})], Out@GRAD[scaled_int8fc_4.tmp_0@GRAD:float[411, 1898]({})], W[ubm_gate_param.w_0:float[1898, 1898]({})]}, outputs:{Bias@GRAD[ubm_gate_param.b_0@GRAD:[1898]({})], Input@GRAD[concat_17.tmp_0@GRAD@RENAME@block0@1:[411, 1898]({})], W@GRAD[ubm_gate_param.w_0@GRAD:[1898, 1898]({})]}.
+I0624 18:13:58.138329 150523 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:13:58.138370 150523 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:13:58.138375 150523 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:13:58.138376 150523 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:13:58.138406 150523 scaled_int8fc_op.cu:265] interval=0.016
+W0624 18:13:58.265030 150525 operator.cc:200] CUDAPlace(5) Op(scaled_int8fc_grad), inputs:{Bias[ubm_gate_param.b_0:float[1898]({})], Input[concat_17.tmp_0:float[376, 1898]({})], Out@GRAD[scaled_int8fc_4.tmp_0@GRAD:float[376, 1898]({})], W[ubm_gate_param.w_0:float[1898, 1898]({})]}, outputs:{Bias@GRAD[ubm_gate_param.b_0@GRAD:[1898]({})], Input@GRAD[concat_17.tmp_0@GRAD@RENAME@block0@1:[376, 1898]({})], W@GRAD[ubm_gate_param.w_0@GRAD:[1898, 1898]({})]}.
+W0624 18:13:58.294363 150520 operator.cc:200] CUDAPlace(0) Op(scaled_int8fc_grad), inputs:{Bias[ubm_gate_param.b_0:float[1898]({})], Input[concat_17.tmp_0:float[371, 1898]({})], Out@GRAD[scaled_int8fc_4.tmp_0@GRAD:float[371, 1898]({})], W[ubm_gate_param.w_0:float[1898, 1898]({})]}, outputs:{Bias@GRAD[ubm_gate_param.b_0@GRAD:[1898]({})], Input@GRAD[concat_17.tmp_0@GRAD@RENAME@block0@1:[371, 1898]({})], W@GRAD[ubm_gate_param.w_0@GRAD:[1898, 1898]({})]}.
+W0624 18:13:58.296474 150524 operator.cc:200] CUDAPlace(4) Op(scaled_int8fc_grad), inputs:{Bias[ubm_gate_param.b_0:float[1898]({})], Input[concat_17.tmp_0:float[366, 1898]({})], Out@GRAD[scaled_int8fc_4.tmp_0@GRAD:float[366, 1898]({})], W[ubm_gate_param.w_0:float[1898, 1898]({})]}, outputs:{Bias@GRAD[ubm_gate_param.b_0@GRAD:[1898]({})], Input@GRAD[concat_17.tmp_0@GRAD@RENAME@block0@1:[366, 1898]({})], W@GRAD[ubm_gate_param.w_0@GRAD:[1898, 1898]({})]}.
+W0624 18:13:58.313969 150527 operator.cc:200] CUDAPlace(7) Op(scaled_int8fc_grad), inputs:{Bias[ubm_gate_param.b_0:float[1898]({})], Input[concat_17.tmp_0:float[383, 1898]({})], Out@GRAD[scaled_int8fc_4.tmp_0@GRAD:float[383, 1898]({})], W[ubm_gate_param.w_0:float[1898, 1898]({})]}, outputs:{Bias@GRAD[ubm_gate_param.b_0@GRAD:[1898]({})], Input@GRAD[concat_17.tmp_0@GRAD@RENAME@block0@1:[383, 1898]({})], W@GRAD[ubm_gate_param.w_0@GRAD:[1898, 1898]({})]}.
+W0624 18:13:58.370076 150526 operator.cc:200] CUDAPlace(6) Op(scaled_int8fc_grad), inputs:{Bias[ubm_gate_param.b_0:float[1898]({})], Input[concat_17.tmp_0:float[388, 1898]({})], Out@GRAD[scaled_int8fc_4.tmp_0@GRAD:float[388, 1898]({})], W[ubm_gate_param.w_0:float[1898, 1898]({})]}, outputs:{Bias@GRAD[ubm_gate_param.b_0@GRAD:[1898]({})], Input@GRAD[concat_17.tmp_0@GRAD@RENAME@block0@1:[388, 1898]({})], W@GRAD[ubm_gate_param.w_0@GRAD:[1898, 1898]({})]}.
+W0624 18:13:58.385834 150523 operator.cc:200] CUDAPlace(3) Op(scaled_int8fc_grad), inputs:{Bias[ubm_gate_param.b_0:float[1898]({})], Input[concat_17.tmp_0:float[383, 1898]({})], Out@GRAD[scaled_int8fc_4.tmp_0@GRAD:float[383, 1898]({})], W[ubm_gate_param.w_0:float[1898, 1898]({})]}, outputs:{Bias@GRAD[ubm_gate_param.b_0@GRAD:[1898]({})], Input@GRAD[concat_17.tmp_0@GRAD@RENAME@block0@1:[383, 1898]({})], W@GRAD[ubm_gate_param.w_0@GRAD:[1898, 1898]({})]}.
+W0624 18:13:58.885262 149207 data_feed.h:1564] pack batch total time: 0.07321[copy:0.022366,fill:0.001241,memory:0.014967,offset:9.9e-05,tensor:0.000885,trans:8.1e-05], batch cpu build mem: 0.029318sec
+W0624 18:13:58.886299 149207 data_feed.h:1564] pack batch total time: 0.067627[copy:0.022168,fill:0.001432,memory:0.009624,offset:0.000102,tensor:0.00067,trans:9.4e-05], batch cpu build mem: 0.029255sec
+W0624 18:13:58.886541 149207 data_feed.h:1564] pack batch total time: 0.075127[copy:0.022442,fill:0.002761,memory:0.014841,offset:0.000111,tensor:0.001107,trans:0.000317], batch cpu build mem: 0.029367sec
+W0624 18:13:58.886754 149207 data_feed.h:1564] pack batch total time: 0.076452[copy:0.022621,fill:0.002375,memory:0.016431,offset:0.000121,tensor:0.00116,trans:9.6e-05], batch cpu build mem: 0.02925sec
+W0624 18:13:58.886981 149207 data_feed.h:1564] pack batch total time: 0.069227[copy:0.022489,fill:0.000467,memory:0.01108,offset:0.000103,tensor:0.00114,trans:8.9e-05], batch cpu build mem: 0.029289sec
+W0624 18:13:58.887192 149207 data_feed.h:1564] pack batch total time: 0.065618[copy:0.021976,fill:0.00152,memory:0.007755,offset:0.000106,tensor:0.000538,trans:0.000133], batch cpu build mem: 0.029343sec
+W0624 18:13:58.887387 149207 data_feed.h:1564] pack batch total time: 0.072409[copy:0.021804,fill:0.001944,memory:0.01359,offset:0.000337,tensor:0.000968,trans:0.000162], batch cpu build mem: 0.029424sec
+W0624 18:13:58.887585 149207 data_feed.h:1564] pack batch total time: 0.079275[copy:0.022528,fill:0.001839,memory:0.017954,offset:0.000107,tensor:0.001094,trans:0.000146], batch cpu build mem: 0.029279sec
+I0624 18:13:58.926499 149207 box_wrapper.h:990] Want to Get metric phase: 1
+W0624 18:13:59.741720 149207 data_set.cc:2110] thread_num 8, ins num 3035, batch num 8, thread avg batch num 1
+I0624 18:14:00.095753 150522 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.095772 150526 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.095814 150522 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.095820 150522 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.095824 150522 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.095824 150526 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.095830 150526 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.095834 150526 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.095860 150522 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.095871 150526 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.095971 150522 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.095978 150526 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.095974 150523 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.095993 150522 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.095999 150526 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.095999 150522 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.096009 150523 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.096007 150526 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.096014 150522 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.096015 150523 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.096019 150526 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.096029 150523 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.096042 150522 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.096055 150526 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.096066 150523 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.096164 150523 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.096184 150523 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.096187 150523 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.096190 150523 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.096210 150523 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.097203 150522 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.097234 150522 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.097229 150526 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.097237 150522 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.097250 150522 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.097262 150526 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.097267 150526 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.097270 150526 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.097276 150522 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.097295 150526 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.097476 150522 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.097493 150526 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.097496 150523 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.097499 150522 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.097517 150526 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.097528 150523 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.097532 150526 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.097525 150522 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.097534 150523 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.097537 150526 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.097539 150522 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.097544 150523 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.097563 150526 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.097573 150522 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.097581 150523 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.097775 150523 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.097796 150523 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.097800 150523 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.097802 150523 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.097817 150523 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.098349 150526 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.098379 150526 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.098383 150526 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.098387 150526 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.098407 150526 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.098498 150522 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.098527 150522 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.098531 150522 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.098534 150522 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.098556 150522 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.098553 150523 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.098582 150523 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.098585 150523 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.098588 150523 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.098608 150523 scaled_int8fc_op.cu:265] interval=0.016
+W0624 18:14:00.101537 150522 operator.cc:200] CUDAPlace(2) Op(scaled_int8fc_grad), inputs:{Bias[ubm_gate_param_update.b_0:float[1898]({})], Input[concat_17.tmp_0:float[379, 1898]({})], Out@GRAD[scaled_int8fc_4.tmp_0@GRAD:float[379, 1898]({})], W[ubm_gate_param_update.w_0:float[1898, 1898]({})]}, outputs:{Bias@GRAD[ubm_gate_param_update.b_0@GRAD:[1898]({})], Input@GRAD[concat_17.tmp_0@GRAD@RENAME@block0@1:[379, 1898]({})], W@GRAD[ubm_gate_param_update.w_0@GRAD:[1898, 1898]({})]}.
+W0624 18:14:00.101538 150526 operator.cc:200] CUDAPlace(6) Op(scaled_int8fc_grad), inputs:{Bias[ubm_gate_param_update.b_0:float[1898]({})], Input[concat_17.tmp_0:float[379, 1898]({})], Out@GRAD[scaled_int8fc_4.tmp_0@GRAD:float[379, 1898]({})], W[ubm_gate_param_update.w_0:float[1898, 1898]({})]}, outputs:{Bias@GRAD[ubm_gate_param_update.b_0@GRAD:[1898]({})], Input@GRAD[concat_17.tmp_0@GRAD@RENAME@block0@1:[379, 1898]({})], W@GRAD[ubm_gate_param_update.w_0@GRAD:[1898, 1898]({})]}.
+W0624 18:14:00.101720 150523 operator.cc:200] CUDAPlace(3) Op(scaled_int8fc_grad), inputs:{Bias[ubm_gate_param_update.b_0:float[1898]({})], Input[concat_17.tmp_0:float[379, 1898]({})], Out@GRAD[scaled_int8fc_4.tmp_0@GRAD:float[379, 1898]({})], W[ubm_gate_param_update.w_0:float[1898, 1898]({})]}, outputs:{Bias@GRAD[ubm_gate_param_update.b_0@GRAD:[1898]({})], Input@GRAD[concat_17.tmp_0@GRAD@RENAME@block0@1:[379, 1898]({})], W@GRAD[ubm_gate_param_update.w_0@GRAD:[1898, 1898]({})]}.
+I0624 18:14:00.106197 150527 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.106241 150527 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.106246 150527 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.106249 150527 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.106279 150527 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.106371 150527 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.106390 150527 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.106395 150527 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.106396 150527 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.106417 150527 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.107781 150527 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.107810 150527 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.107813 150527 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.107816 150527 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.107839 150527 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.108039 150527 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.108062 150527 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.108065 150527 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.108068 150527 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.108083 150527 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.108791 150527 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.108817 150527 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.108821 150527 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.108824 150527 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.108846 150527 scaled_int8fc_op.cu:265] interval=0.016
+W0624 18:14:00.112008 150527 operator.cc:200] CUDAPlace(7) Op(scaled_int8fc_grad), inputs:{Bias[ubm_gate_param_update.b_0:float[1898]({})], Input[concat_17.tmp_0:float[379, 1898]({})], Out@GRAD[scaled_int8fc_4.tmp_0@GRAD:float[379, 1898]({})], W[ubm_gate_param_update.w_0:float[1898, 1898]({})]}, outputs:{Bias@GRAD[ubm_gate_param_update.b_0@GRAD:[1898]({})], Input@GRAD[concat_17.tmp_0@GRAD@RENAME@block0@1:[379, 1898]({})], W@GRAD[ubm_gate_param_update.w_0@GRAD:[1898, 1898]({})]}.
+I0624 18:14:00.149600 150520 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.149641 150520 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.149646 150520 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.149647 150520 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.149683 150520 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.149776 150520 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.149796 150520 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.149801 150520 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.149804 150520 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.149827 150520 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.149930 150525 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.149952 150524 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.149968 150525 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.149973 150525 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.149976 150525 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.149988 150524 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.149993 150524 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.149996 150524 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.150007 150525 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.150027 150524 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.150105 150525 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.150120 150524 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.150125 150525 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.150130 150525 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.150132 150525 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.150141 150524 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.150144 150524 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.150147 150524 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.150152 150525 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.150168 150524 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.150692 150521 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.150728 150521 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.150733 150521 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.150736 150521 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.150768 150521 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.150763 150520 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.150792 150520 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.150796 150520 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.150799 150520 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.150823 150520 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.150856 150521 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.150874 150521 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.150878 150521 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.150880 150521 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.150900 150521 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.151031 150520 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.151055 150520 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.151059 150520 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.151062 150520 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.151062 150525 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.151085 150520 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.151094 150525 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.151099 150525 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.151101 150525 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.151108 150524 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.151124 150525 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.151136 150524 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.151141 150524 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.151144 150524 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.151166 150524 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.151309 150525 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.151329 150525 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.151333 150525 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.151335 150525 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.151350 150525 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.151355 150524 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.151376 150524 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.151381 150524 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.151389 150524 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.151404 150524 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.151819 150521 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.151826 150520 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.151850 150521 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.151855 150521 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.151854 150520 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.151861 150521 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.151867 150520 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.151876 150520 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.151891 150521 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.151901 150520 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.152066 150525 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.152096 150525 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.152098 150525 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.152098 150521 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.152109 150525 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.152129 150521 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.152133 150521 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.152137 150521 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.152130 150524 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.152138 150525 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.152151 150521 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.152160 150524 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.152165 150524 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.152168 150524 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.152190 150524 scaled_int8fc_op.cu:265] interval=0.016
+I0624 18:14:00.152869 150521 scaled_int8fc_op.cu:224] clip_factor=2, clip=2, expand_factor=10
+I0624 18:14:00.152897 150521 blas_impl.cu.h:546] 1. call int8_t GEMM_EX.
+I0624 18:14:00.152901 150521 blas_impl.cu.h:210] 2. CUBlas int8_t, algo is CUBLAS_GEMM_DFALT_TENSOR_OP.
+I0624 18:14:00.152904 150521 blas_impl.cu.h:214] 3. use_tensor_op_math: True
+I0624 18:14:00.152936 150521 scaled_int8fc_op.cu:265] interval=0.016
+W0624 18:14:00.154652 150520 operator.cc:200] CUDAPlace(0) Op(scaled_int8fc_grad), inputs:{Bias[ubm_gate_param_update.b_0:float[1898]({})], Input[concat_17.tmp_0:float[382, 1898]({})], Out@GRAD[scaled_int8fc_4.tmp_0@GRAD:float[382, 1898]({})], W[ubm_gate_param_update.w_0:float[1898, 1898]({})]}, outputs:{Bias@GRAD[ubm_gate_param_update.b_0@GRAD:[1898]({})], Input@GRAD[concat_17.tmp_0@GRAD@RENAME@block0@1:[382, 1898]({})], W@GRAD[ubm_gate_param_update.w_0@GRAD:[1898, 1898]({})]}.
+W0624 18:14:00.155593 150525 operator.cc:200] CUDAPlace(5) Op(scaled_int8fc_grad), inputs:{Bias[ubm_gate_param_update.b_0:float[1898]({})], Input[concat_17.tmp_0:float[379, 1898]({})], Out@GRAD[scaled_int8fc_4.tmp_0@GRAD:float[379, 1898]({})], W[ubm_gate_param_update.w_0:float[1898, 1898]({})]}, outputs:{Bias@GRAD[ubm_gate_param_update.b_0@GRAD:[1898]({})], Input@GRAD[concat_17.tmp_0@GRAD@RENAME@block0@1:[379, 1898]({})], W@GRAD[ubm_gate_param_update.w_0@GRAD:[1898, 1898]({})]}.
+W0624 18:14:00.155611 150524 operator.cc:200] CUDAPlace(4) Op(scaled_int8fc_grad), inputs:{Bias[ubm_gate_param_update.b_0:float[1898]({})], Input[concat_17.tmp_0:float[379, 1898]({})], Out@GRAD[scaled_int8fc_4.tmp_0@GRAD:float[379, 1898]({})], W[ubm_gate_param_update.w_0:float[1898, 1898]({})]}, outputs:{Bias@GRAD[ubm_gate_param_update.b_0@GRAD:[1898]({})], Input@GRAD[concat_17.tmp_0@GRAD@RENAME@block0@1:[379, 1898]({})], W@GRAD[ubm_gate_param_update.w_0@GRAD:[1898, 1898]({})]}.
+W0624 18:14:00.156354 150521 operator.cc:200] CUDAPlace(1) Op(scaled_int8fc_grad), inputs:{Bias[ubm_gate_param_update.b_0:float[1898]({})], Input[concat_17.tmp_0:float[379, 1898]({})], Out@GRAD[scaled_int8fc_4.tmp_0@GRAD:float[379, 1898]({})], W[ubm_gate_param_update.w_0:float[1898, 1898]({})]}, outputs:{Bias@GRAD[ubm_gate_param_update.b_0@GRAD:[1898]({})], Input@GRAD[concat_17.tmp_0@GRAD@RENAME@block0@1:[379, 1898]({})], W@GRAD[ubm_gate_param_update.w_0@GRAD:[1898, 1898]({})]}.
+W0624 18:14:00.520277 149207 data_feed.h:1564] pack batch total time: 0.194986[copy:0.012199,fill:0.000319,memory:0.000407,offset:0.0001,tensor:0.001355,trans:9e-05], batch cpu build mem: 0.180514sec
+W0624 18:14:00.521457 149207 data_feed.h:1564] pack batch total time: 0.195092[copy:0.012424,fill:0.000392,memory:0.000364,offset:9.9e-05,tensor:0.001334,trans:9.5e-05], batch cpu build mem: 0.180383sec
+W0624 18:14:00.521751 149207 data_feed.h:1564] pack batch total time: 0.003959[copy:0.000573,fill:0.000426,memory:4e-06,offset:0.001272,tensor:0.000589,trans:0.000151], batch cpu build mem: 0.000941sec
+W0624 18:14:00.521986 149207 data_feed.h:1564] pack batch total time: 0.003961[copy:0.000577,fill:0.000427,memory:2e-06,offset:0.001265,tensor:0.000602,trans:0.000146], batch cpu build mem: 0.000937sec
+W0624 18:14:00.522203 149207 data_feed.h:1564] pack batch total time: 0.194616[copy:0.012087,fill:0.000415,memory:0.000262,offset:9.7e-05,tensor:0.001401,trans:9.5e-05], batch cpu build mem: 0.180257sec
+W0624 18:14:00.522410 149207 data_feed.h:1564] pack batch total time: 0.193766[copy:0.011398,fill:0.000933,memory:0.000722,offset:9.8e-05,tensor:0.000991,trans:0.000139], batch cpu build mem: 0.179483sec
+W0624 18:14:00.522608 149207 data_feed.h:1564] pack batch total time: 0.08953[copy:0.083969,fill:0.00346,memory:2e-06,offset:0.000102,tensor:0.000677,trans:0.000382], batch cpu build mem: 0.000937sec
+W0624 18:14:00.522814 149207 data_feed.h:1564] pack batch total time: 0.154873[copy:0.151216,fill:0.001315,memory:1e-06,offset:0.000261,tensor:0.00096,trans:0.000158], batch cpu build mem: 0.000959sec
+I0624 18:14:00.567783 149207 box_wrapper.h:990] Want to Get metric phase: 0
+W0624 18:14:00.663897 149207 log_printer.h:144] 2021-06-24 18:14:00[0][149207]:EndPass end, passid = 0, use time[0.000003] sec, clear time[0.000050], need save delta [0], pull:0.272605(merge:0.014615,restore:0.000324,fea:3878028,1700248) push:0.000000(merge:0.000000,update:0.000000,barrier:0.000000) 
+I0624 18:14:00.665844 149207 box_wrapper.h:990] Want to Get metric phase: -1
+W0624 18:14:00.901966 149207 box_wrapper.h:484] ReleasePool Size=9216, Time=0.003287sec
+W0624 18:14:06.299237 139602 log_printer.h:144] 2021-06-24 18:14:06[0][139602]:SSD close time cost:5.346338 sec

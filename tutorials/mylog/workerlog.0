@@ -1,0 +1,24 @@
+W0512 07:47:49.820205   623 gen_comm_id_helper.cc:120] connect addr=127.0.0.1:60935 failed 1 times with reason: Connection refused retry after 0.5 seconds
+I0512 07:47:50.320628   623 nccl_context.cc:74] init nccl context nranks: 2 local rank: 0 gpu id: 0 ring id: 0
+W0512 07:47:50.808826   623 device_context.cc:404] Please NOTE: device: 0, GPU Compute Capability: 6.1, Driver API Version: 10.2, Runtime API Version: 10.1
+W0512 07:47:50.813470   623 device_context.cc:422] device: 0, cuDNN Version: 7.6.
+Epoch 0 step 100, Loss = [1.778881], Accuracy = 0.71875
+Epoch 0 step 200, Loss = [1.7471644], Accuracy = 0.703125
+Epoch 0 step 300, Loss = [1.6927967], Accuracy = 0.765625
+Epoch 0 step 400, Loss = [1.7606564], Accuracy = 0.703125
+Epoch 1 step 100, Loss = [1.5457628], Accuracy = 0.921875
+Epoch 1 step 200, Loss = [1.4718882], Accuracy = 1.0
+Epoch 1 step 300, Loss = [1.4772292], Accuracy = 0.984375
+Epoch 1 step 400, Loss = [1.4998204], Accuracy = 0.96875
+Epoch 2 step 100, Loss = [1.4903858], Accuracy = 0.96875
+Epoch 2 step 200, Loss = [1.4622567], Accuracy = 1.0
+Epoch 2 step 300, Loss = [1.4848998], Accuracy = 0.96875
+Epoch 2 step 400, Loss = [1.4940884], Accuracy = 0.96875
+Epoch 3 step 100, Loss = [1.513443], Accuracy = 0.953125
+Epoch 3 step 200, Loss = [1.4684241], Accuracy = 1.0
+Epoch 3 step 300, Loss = [1.4763646], Accuracy = 0.984375
+Epoch 3 step 400, Loss = [1.4803758], Accuracy = 0.984375
+Epoch 4 step 100, Loss = [1.4989314], Accuracy = 0.953125
+Epoch 4 step 200, Loss = [1.4632163], Accuracy = 1.0
+Epoch 4 step 300, Loss = [1.4761916], Accuracy = 0.984375
+Epoch 4 step 400, Loss = [1.4882143], Accuracy = 0.96875
