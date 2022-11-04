@@ -9,9 +9,22 @@ __*__
 *.*_*
 _*
 *.cloudpickle
+*.pb
+*.out
+*.txt
+*.prof
+*.svg
+*.so
+*.o
+
+op2func/prof/*
+*/build/*
+*/custom_setup_ops.egg-info
 
 build_venv/*
 Paddle-Inference-Demo/*
+
+internal/*
 
 !*.py
 !.gitignore

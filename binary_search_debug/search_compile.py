@@ -30,7 +30,7 @@ def softlink(commit):
 
 def condition(commit):
     print(commit)
-    # compile(commit)
+    compile(commit)
     softlink(commit)
     res = os.popen("python /work/scripts/binary_search_debug/seg_fault/queue_seg.py").read()
     lines = res.splitlines()
